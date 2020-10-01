@@ -4,7 +4,7 @@ $db = parse_url(getenv("postgres://rxghsggtzmiezw:c2b6fe631e6453416ef8514e024fba
 $db["path"] = ltrim($db["path"], "/");
 
 // Performing SQL query
-$query = 'SELECT * FROM saleItem';
+$query = 'SELECT * FROM saleItems';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 // Printing results in HTML
