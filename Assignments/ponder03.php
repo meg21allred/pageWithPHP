@@ -39,11 +39,16 @@ class item {
     public function print_item() {
         echo $this->name . " ";
         echo "<image src='{$this->photo}' width='100px'>" . " ";
-        echo $this->quan . " ";
         echo "$" . $this->price;
+        echo "<button class='btn'onclick='$this->addquan()'>add +</button>";
         echo "<br>";
         
 
+    }
+
+    public function add_quan() {
+        $this->quan += 1;
+        echo $this->quan;
     }
 
     
