@@ -15,6 +15,8 @@ $db["path"] = ltrim($db["path"], "/");
 //                   user=rxghsggtzmiezw
 //                   password=c2b6fe631e6453416ef8514e024fba6323e9274d3cd433dc0d6d1cb3aad789a9");
 
+$conn = pg_connect($db["path"]);
+
 $sql = "SELECT * FROM saleItems";
 $result = pg_query($sql);
 
