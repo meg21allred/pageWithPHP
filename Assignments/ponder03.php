@@ -1,3 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponder03:Shopping Cart</title>
+</head>
+<body>
+    <ul>
+    <li id= 1>
+    <label name="name1">Diapers</label>
+    <image src="diapers.jpg" name="photo1">
+    <span name="price1">9.95</span>
+    <input type="hidden" value="0" name="quan1">
+    </li>
+
+    </ul>
+</body>
+</html>
+
+
+
 <?php
 
 // $host = "ec2-3-224-97-209.compute-1.amazonaws.com";
@@ -29,43 +51,43 @@
 
 // echo "do you see a table?";
 
-class item {
-    var $id;
-    var $name;
-    var $photo;
-    var $quan;
-    var $price;
+// class item {
+//     var $id;
+//     var $name;
+//     var $photo;
+//     var $quan;
+//     var $price;
 
-    public function print_item() {
-        echo $this->name . " ";
-        echo "<image src='{$this->photo}' width='100px'>" . " ";
-        echo "$" . $this->price;
+//     public function print_item() {
+//         echo $this->name . " ";
+//         echo "<image src='{$this->photo}' width='100px'>" . " ";
+//         echo "$" . $this->price;
 
-    }
+//     }
 
-}
+// }
 
-$item_1 = new item;
-$item_1->name = "Diapers";
-$item_1->photo = "diapers.jpg";
-$item_1->quan = 0;
-$item_1->price = "9.95";
+// $item_1 = new item;
+// $item_1->name = "Diapers";
+// $item_1->photo = "diapers.jpg";
+// $item_1->quan = 0;
+// $item_1->price = "9.95";
 
-$item_1->print_item();
+// $item_1->print_item();
 
-echo "<form action='cart.php' method='post'>
-        <input value='0' name='quan1'>
-        <button type='submit'>add +</button>
-        </form>";
+// echo "<form action='cart.php' method='post'>
+//         <input value='0' name='quan1'>
+//         <button type='submit'>add +</button>
+//         </form>";
 
-$item_2 = new item;
+// $item_2 = new item;
 
-$item_2->name = "Onsie";
-$item_2->photo = "onsie.jpg";
-$item_2->quan = 0;
-$item_2->price = "12.95";
+// $item_2->name = "Onsie";
+// $item_2->photo = "onsie.jpg";
+// $item_2->quan = 0;
+// $item_2->price = "12.95";
 
-$item_2->print_item();
+// $item_2->print_item();
 
 
 
