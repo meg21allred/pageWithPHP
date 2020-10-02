@@ -40,13 +40,6 @@ class item {
         echo $this->name . " ";
         echo "<image src='{$this->photo}' width='100px'>" . " ";
         echo "$" . $this->price;
-        echo "<form action='ponder03.php' method='get'>
-                <input value='$this->quan' name='quan'>
-                <input type='hidden' value='$id' name='id'>
-                <button type='submit class='btn'>+ add</button>
-                </form>";
-        echo "<br>";
-        
 
     }
 
@@ -55,10 +48,15 @@ class item {
 $item_1 = new item;
 $item_1->name = "Diapers";
 $item_1->photo = "diapers.jpg";
-$item_1->quan = 0;
+$item_1->quan = 4;
 $item_1->price = "9.95";
 
 $item_1->print_item();
+
+echo "<form action='ponder03.php' method='post'>
+        <input value='$item_1->quan' name='quan1'>
+        <button type='submit'>add +</button>
+        </form>";
 
 $item_2 = new item;
 
@@ -69,7 +67,10 @@ $item_2->price = "12.95";
 
 $item_2->print_item();
 
-
+echo "<form action='ponder03.php' method='post'>
+        <input value='$item_2->quan' name='quan2'>
+        <button type='submit'>add +</button>
+        </form>";
 
 
  ?>
