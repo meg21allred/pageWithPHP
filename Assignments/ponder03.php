@@ -48,13 +48,13 @@ class item {
 $item_1 = new item;
 $item_1->name = "Diapers";
 $item_1->photo = "diapers.jpg";
-$item_1->quan = 4;
+$item_1->quan = 0;
 $item_1->price = "9.95";
 
 $item_1->print_item();
 
-echo "<form action='ponder03.php' method='post'>
-        <input value='$item_1->quan' name='quan1'>
+echo "<form action='cart.php' method='post'>
+        <input value='0' name='quan1'>
         <button type='submit'>add +</button>
         </form>";
 
@@ -67,10 +67,7 @@ $item_2->price = "12.95";
 
 $item_2->print_item();
 
-echo "<form action='ponder03.php' method='post'>
-        <input value='$item_2->quan' name='quan2'>
-        <button type='submit'>add +</button>
-        </form>";
+
 
 
  ?>
