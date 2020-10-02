@@ -60,8 +60,6 @@ $item_1->price = "9.95";
 
 $item_1->print_item();
 
-echo "<button class='btn'onclick='$this->addquan()'>add +</button>";
-
 $item_2 = new item;
 
 $item_2->name = "Onsie";
