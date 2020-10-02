@@ -40,18 +40,16 @@ class item {
         echo $this->name . " ";
         echo "<image src='{$this->photo}' width='100px'>" . " ";
         echo "$" . $this->price;
-        echo "<button class='btn'onclick='$this->addquan()'>add +</button>";
+        echo "<form action='ponder03.php' method='get'>
+                <input value='$this->quan' name='quan'>
+                <input type='hidden' value='$id' name='id'>
+                <button type='submit class='btn'>+ add</button>
+                </form>";
         echo "<br>";
         
 
     }
 
-    public function add_quan() {
-        $this->quan += 1;
-        echo $this->quan;
-    }
-
-    
 }
 
 $item_1 = new item;
@@ -62,6 +60,8 @@ $item_1->price = "9.95";
 
 $item_1->print_item();
 
+echo "<button class='btn'onclick='$this->addquan()'>add +</button>";
+
 $item_2 = new item;
 
 $item_2->name = "Onsie";
@@ -70,6 +70,8 @@ $item_2->quan = 0;
 $item_2->price = "12.95";
 
 $item_2->print_item();
+
+
 
 
  ?>
