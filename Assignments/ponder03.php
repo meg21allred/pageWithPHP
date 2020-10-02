@@ -38,7 +38,7 @@ class item {
 
     public function print_item() {
         echo $this->name . " ";
-        echo "<image src='{$this->photo}'>" . " ";
+        echo "<image src='{$this->photo}' width='100px'>" . " ";
         echo $this->quan . " ";
         echo "$" . $this->price;
 
