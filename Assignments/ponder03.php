@@ -25,5 +25,6 @@ foreach ($result as $key) {
     echo $key['price'];
 }
 
+echo "do you see a table?";
 
  ?>
