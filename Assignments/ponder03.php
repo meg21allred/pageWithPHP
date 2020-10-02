@@ -9,7 +9,7 @@
     <ul>
     <li id= 1>
     <label name="name1">Diapers</label>
-    <image src="diapers.jpg" name="photo1">
+    <image src="diapers.jpg" name="photo1" width="100px">
     <span name="price1">9.95</span>
     <input type="hidden" value="0" name="quan1">
     </li>
