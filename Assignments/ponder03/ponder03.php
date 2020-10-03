@@ -6,7 +6,26 @@ if(!(isset($_SESSION['cart']))) {
     $_SESSION['cart'];
 } // end of session cart if
 
-echo "<pre> hello";
+
+$out = "";
+
+//adding to cart
+if(isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $quan = $_GET['quan'];
+
+    if($quan > 0 && filter_var($quan, FILTER_VALIDATE_INT)) {
+        if(isset($_SESSION['cart'][$id])) {
+            $_SESSION['cart'][$id] += $quan;
+        } else {
+            $_SESSION['cart'][$id] = $quan;
+        } // checking if item is already in cart
+    } else {
+        $out = "Please add a whole number to the cart";
+    } // checks for bad input
+}
+
+echo "<pre>";
 print_r($_SESSION['cart']);
 echo "</pre>";
 
@@ -32,6 +51,8 @@ echo "<table>
             <td>Quantity</td>
             <td></td>
             </tr>";
+
+echo "$out";
 while ($row = pg_fetch_assoc($result)) {
 
    echo "
