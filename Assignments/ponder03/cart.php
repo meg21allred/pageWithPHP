@@ -31,7 +31,7 @@ or die ("Could not connect to server\n");
 
 //$result = pg_query($db_connection, $query) or die("Cannot execute query: $query \n");
 
-
+$grand = 0;
 echo "<table>
         <tr>
             <td>Item</td>
@@ -41,23 +41,28 @@ echo "<table>
             <td></td>
             <td>SubTotal</td>
             </tr>";
+
 foreach ($_SESSION['cart'] as $key => $val) {
     $sql = "SELECT * FROM saleItems WHERE id = '$key'";
     $result = pg_query($db_connection, $sql) or die("cannot querey the database");
     $row = pg_fetch_assoc($result);
 
     $sub = $row['price']*$val;
+    $grand += $sub;
     echo "
     <tr>
         <td>{$row['item']}</td>
         <td><image src='{$row['image']}' width='150px'></td>
-        <td>{$row['price']}</td>
+        <td>$ {$row['price']}</td>
         <td>$val</td>
         <td>update quanity</td>
-        <td>$sub</td>
+        <td>$ $sub</td>
     ";
 }
 
+echo "<tr>
+            <td colspan='4'>Grand Total: $grand</td>
+      </tr>";
 echo "</table>";
 
 echo "<a href='ponder03.php?clear=1'>Clear Cart</a>";
