@@ -75,7 +75,7 @@ if(!empty($_SESSION['cart'])) {
                     <input value='$val' name='quan'>
                     <input type='hidden' value='$key' name='id'>
                 </td>
-                <td><input type='submit value='update'></td>
+                <td><input type='submit' value='update'></td>
             </form>
             <td>$ $sub</td>
         ";
