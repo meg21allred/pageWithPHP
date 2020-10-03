@@ -30,7 +30,7 @@ if(isset($_GET['id'])) {
         unset($_SESSION['cart'][$id]);
     }
 
-    if($quan > 0 && filter_var($quan, FILTER_VALIDATE_INT) && !(is_string($quan))) {
+    if($quan > 0 && filter_var($quan, FILTER_VALIDATE_INT)) {
        //update quantity
        $_SESSION['cart'][$id] = $quan;
     }  else {
