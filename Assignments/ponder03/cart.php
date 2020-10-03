@@ -27,12 +27,9 @@ $port = "5432";
 $db_connection = pg_connect("host=$host dbname=$dbname user=$user password=$password")
 or die ("Could not connect to server\n");
 
-//$query = "SELECT * FROM saleItems";
-
-//$result = pg_query($db_connection, $query) or die("Cannot execute query: $query \n");
-
 $grand = 0;
-echo "<table>
+if(!empty($_SESSION['cart'])) {
+    echo "<table>
         <tr>
             <td>Item</td>
             <td></td>
@@ -42,28 +39,32 @@ echo "<table>
             <td>SubTotal</td>
             </tr>";
 
-foreach ($_SESSION['cart'] as $key => $val) {
-    $sql = "SELECT * FROM saleItems WHERE id = '$key'";
-    $result = pg_query($db_connection, $sql) or die("cannot querey the database");
-    $row = pg_fetch_assoc($result);
+    foreach ($_SESSION['cart'] as $key => $val) {
+        $sql = "SELECT * FROM saleItems WHERE id = '$key'";
+        $result = pg_query($db_connection, $sql) or die("cannot querey the database");
+        $row = pg_fetch_assoc($result);
 
-    $sub = $row['price']*$val;
-    $grand += $sub;
-    echo "
-    <tr>
-        <td>{$row['item']}</td>
-        <td><image src='{$row['image']}' width='150px'></td>
-        <td>$ {$row['price']}</td>
-        <td>$val</td>
-        <td>update quanity</td>
-        <td>$ $sub</td>
-    ";
-}
+        $sub = $row['price']*$val;
+        $grand += $sub;
+        echo "
+        <tr>
+            <td>{$row['item']}</td>
+            <td><image src='{$row['image']}' width='150px'></td>
+            <td>$ {$row['price']}</td>
+            <td>$val</td>
+            <td>update quanity</td>
+            <td>$ $sub</td>
+        ";
+    } //for each loop
 
 echo "<tr>
-            <td colspan='4'>Grand Total: $grand</td>
+            <td colspan='4'>Grand Total: $ $grand</td>
       </tr>";
 echo "</table>";
+} else {
+    echo "<h1>Your Cart is Empty</h1>";
+} //end of if cart is not empty
+
 
 echo "<a href='ponder03.php?clear=1'>Clear Cart</a>";
 
