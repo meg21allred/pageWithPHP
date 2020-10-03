@@ -12,6 +12,6 @@
 </head>
 <body>
    <h1> This is my Assignments Page </h1>
-   <a href="Assignments/ponder03.php">Ponder 03: Shopping Cart</a>
+   <a href="Assignments/ponder03/ponder03.php">Ponder 03: Shopping Cart</a>
 </body>
 </html>
