@@ -46,6 +46,7 @@ foreach ($_SESSION['cart'] as $key => $val) {
     $result = pg_query($db_connection, $sql) or die("cannot querey the database");
     $row = pg_fetch_assoc($result);
 
+    $sub = $row['price']*$val;
     echo "
     <tr>
         <td>{$row['item']}</td>
@@ -53,7 +54,7 @@ foreach ($_SESSION['cart'] as $key => $val) {
         <td>{$row['price']}</td>
         <td>$val</td>
         <td>update quanity</td>
-        <td>0</td>
+        <td>$sub</td>
     ";
 }
 
