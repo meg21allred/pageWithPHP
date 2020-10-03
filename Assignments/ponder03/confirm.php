@@ -38,10 +38,7 @@
                 <tr>
                     <td>Item</td>
                     <td></td>
-                    <td>Price</td>
                     <td>Quantity</td>
-                    <td></td>
-                    <td>SubTotal</td>
                     </tr>";
         
             foreach ($_SESSION['cart'] as $key => $val) {
@@ -67,9 +64,10 @@
         
         
         
-        echo "will be sent to: " . 
-            $street . ", " . $city . ", " . $state . " " . $zip . "</h1>";
+        echo "<br><h2>will be sent to: " . 
+            $street . ", " . $city . ", " . $state . " " . $zip . "</h2>";
 
+            session_unset();
     ?>
 </body>
 </html>
