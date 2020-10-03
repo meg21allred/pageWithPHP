@@ -6,6 +6,9 @@ if(!(isset($_SESSION['cart']))) {
     $_SESSION['cart'];
 } // end of session cart if
 
+if(isset($_GET['clear'])) {
+    $_SESSION['cart'] = array();
+}//clear the cart
 
 $out = "";
 
@@ -73,6 +76,8 @@ while ($row = pg_fetch_assoc($result)) {
     ";
 }
 echo "</table>";
+
+echo "<a href='ponder03.php?clear=1'>Clear Cart</a>";
 
 pg_close($db_connection);
     
