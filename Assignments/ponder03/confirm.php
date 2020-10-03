@@ -8,6 +8,18 @@
 <body>
     <?php
         echo "this is the confirmation page.";
+
+        $first = $_GET['first_name'];
+        $last = $_GET['last_name'];
+        $street = $_GET['street'];
+        $city = $_GET['city'];
+        $state = $_GET['state'];
+        $zip = $_GET['zip'];
+
+        echo "<h1>Thank you " . $first . " " . $last . "!</h1>";
+        echo "<h2>Your order will be sent to: " . 
+            $street . ", " . $city . ", " . $state . $zip . "</h1>";
+
     ?>
 </body>
 </html>
