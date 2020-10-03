@@ -32,7 +32,7 @@ while ($row = pg_fetch_assoc($result)) {
             <form action='{$_SERVER['PHP_SELF']}'}>
                 <input type='text' name='quan' id='quan'>
                 <input type='hidden' name='id' id='id' value='{$row['id']}'>
-                <input type='sumbit' value='Add to Cart'>
+                <input type='submit' value='Add to Cart'>
             </form>
         </td>
     </tr>
