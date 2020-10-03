@@ -35,7 +35,7 @@ or die ("Could not connect to server\n");
 echo "<table>
         <tr>
             <td>Item</td>
-            <td></td>
+        
             <td>Price</td>
             <td>Quantity</td>
             <td></td>
@@ -49,12 +49,11 @@ foreach ($_SESSION['cart'] as $key => $val) {
     echo "
     <tr>
         <td>{$row['item']}</td>
-        <td>{$row['image']}</td>
         <td>{$row['price']}</td>
         <td>$val</td>
         <td>update quanity</td>
         <td>0</td>
-    "
+    ";
 }
 
 echo "</table>";
