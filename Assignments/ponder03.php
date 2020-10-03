@@ -26,7 +26,7 @@ while ($row = pg_fetch_assoc($result)) {
         <td>
             {$row['item']}
         </td>
-        <td> <image src='{$row['image']}'> </td>
+        <td> <image src='{$row['image']}' width='100px'> </td>
         <td> $ {$row['price']}</td>
         <td>
             <form action='{$_SERVER['PHP_SELF']}'}>
