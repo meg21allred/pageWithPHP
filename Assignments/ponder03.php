@@ -14,9 +14,6 @@ $query = "SELECT * FROM saleItems";
 
 $result = pg_query($db_connection, $query) or die("Cannot execute query: $query \n");
 
-echo $result. "<br>";
-echo "is it working?";
-echo "<br>";
 
 echo "<table>";
 while ($row = pg_fetch_assoc($result)) {
