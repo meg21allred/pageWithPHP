@@ -27,7 +27,7 @@ if(isset($_GET['id'])) {
 
     if($quan > 0 && filter_var($quan, FILTER_VALIDATE_INT)) {
         if(isset($_SESSION['cart'][$id])) {
-            $_SESSION['cart'][$id] += $quan;
+            $_SESSION['cart'][$id] = $quan;
             
         } else {
             $_SESSION['cart'][$id] = $quan;
@@ -35,12 +35,8 @@ if(isset($_GET['id'])) {
     } else {
         $out = "Please add a whole number to the cart";
     } // checks for bad input
-    $_SESSION['cart'][$id] = 0;
+    
 }
-
-echo "<pre>";
-print_r($_SESSION['cart']);
-echo "</pre>";
 
 $host = "ec2-3-224-97-209.compute-1.amazonaws.com";
 $user = "rxghsggtzmiezw";
