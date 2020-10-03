@@ -28,13 +28,14 @@ if(isset($_GET['id'])) {
     if($quan > 0 && filter_var($quan, FILTER_VALIDATE_INT)) {
         if(isset($_SESSION['cart'][$id])) {
             $_SESSION['cart'][$id] += $quan;
-            $quan = 0;
+            
         } else {
             $_SESSION['cart'][$id] = $quan;
         } // checking if item is already in cart
     } else {
         $out = "Please add a whole number to the cart";
     } // checks for bad input
+    $quan = 0;
 }
 
 echo "<pre>";
