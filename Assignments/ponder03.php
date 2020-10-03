@@ -11,7 +11,8 @@ $db_connection = pg_connect("host=$host dbname=$dbname user=$user password=$pass
 
 $result = pg_query($db_connection, "SELECT * FROM saleItems");
 
-echo vardump($result);
+echo $result;
+echo "is it working?"
 
 
 ?>
