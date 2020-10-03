@@ -15,28 +15,25 @@ echo $result;
 echo "is it working?";
 echo "<br>";
 echo "<table>";
-while($row = $result) {
-    echo "
-    
-    <tr>
-        <td>
-            {$row['name']}
-        </td>
-        <td> $ {$row['price']}</td>
-        <td>
-            <form action='{$_SERVER['PHP_SELF']}'}>
-                <input type='text' name='quan' id='quan'>
-                <input type='hidden' name='id' id='id' value='{$row['id']}'>
-                <input type='sumbit' value='Add to Cart'>
-            </form>
-        </td>
-    </tr>
-    
+while($row = pq_fetch_row($result)) {
+    echo " $row[0] $row[1] $row[2] $row[3] \n";
+}
+    // <tr>
+    //     <td>
+    //         {$row['name']}
+    //     </td>
+    //     <td> $ {$row['price']}</td>
+    //     <td>
+    //         <form action='{$_SERVER['PHP_SELF']}'}>
+    //             <input type='text' name='quan' id='quan'>
+    //             <input type='hidden' name='id' id='id' value='{$row['id']}'>
+    //             <input type='sumbit' value='Add to Cart'>
+    //         </form>
+    //     </td>
+    // </tr>
 
 
-    ";
-} // end of while loop
-echo "</table>";
+    echo "</table>";
 
 ?>
 
