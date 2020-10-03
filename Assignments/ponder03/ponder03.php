@@ -72,7 +72,7 @@ while ($row = pg_fetch_assoc($result)) {
         <td> <image src='{$row['image']}' width='150px'> </td>
         <td> $ {$row['price']}</td>
         <td>
-            <form action='{$_SERVER['PHP_SELF']}'}>
+            <form action='cart.php'}>
                 <input type='text' name='quan' id='quan'>
                 <input type='hidden' name='id' id='id' value='{$row['id']}'>
                 <input type='submit' value='Add to Cart'>
