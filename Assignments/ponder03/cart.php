@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
+
+<a href="ponder03.php">Continue Shopping</a>
 <?php
 
 SESSION_START();
