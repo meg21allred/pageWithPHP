@@ -28,7 +28,7 @@ if(isset($_GET['id'])) {
     if($quan > 0 && filter_var($quan, FILTER_VALIDATE_INT)) {
        //update quantity
        $_SESSION['cart'][$id] = $quan;
-    } elseif($quan == 0) {
+    } elseif($quan == 0 && filter_var($quan, FILTER_VALIDATE_INT)) {
         //remove item
         unset($_SESSION['cart'][$id]);
     } else {
