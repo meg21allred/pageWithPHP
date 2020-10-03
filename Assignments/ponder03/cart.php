@@ -26,7 +26,7 @@ if(isset($_GET['id'])) {
     $quan = $_GET['quan'];
    
     if (is_string($quan)) {
-        $out = "Please add a whole number to the cart";
+        $out = "Please add a number to the cart";
 
     } elseif($quan == 0) {
         //remove item
