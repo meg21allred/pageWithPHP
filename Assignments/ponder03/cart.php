@@ -99,6 +99,8 @@ echo "<a href='cart.php?clear=1'>Clear Cart</a>";
 pg_close($db_connection);
        
 ?>
+
+<a href="checkOut.php">Check out</a>
 </body>
 </html>
 
