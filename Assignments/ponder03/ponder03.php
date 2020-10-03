@@ -1,13 +1,12 @@
 
 <?php
-
 SESSION_START();
 
 if(!(isset($_SESSION['cart']))) {
     $_SESSION['cart'];
 } // end of session cart if
 
-echo "<pre>";
+echo "<pre> hello";
 print_r($_SESSION['cart']);
 echo "</pre>";
 
