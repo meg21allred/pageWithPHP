@@ -1,4 +1,12 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<a href="cart.php">View cart</a>
 <?php
 SESSION_START();
 
@@ -80,13 +88,11 @@ echo "</table>";
 echo "<a href='ponder03.php?clear=1'>Clear Cart</a>";
 
 pg_close($db_connection);
-    
-
-
-
-   
-
+       
 ?>
+</body>
+</html>
+
 
 
 
