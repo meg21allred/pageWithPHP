@@ -28,12 +28,10 @@ if(isset($_GET['id'])) {
     if($quan == 0 && !(is_string($quan))) {
         //remove item
         unset($_SESSION['cart'][$id]);
-    }
-
-    if($quan > 0 && filter_var($quan, FILTER_VALIDATE_INT)) {
+    } elseif($quan > 0 && filter_var($quan, FILTER_VALIDATE_INT)) {
        //update quantity
        $_SESSION['cart'][$id] = $quan;
-    }  else {
+    } else {
         $out = "Please add a whole number to the cart";
     } // checks for bad input
 
