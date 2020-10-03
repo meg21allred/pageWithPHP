@@ -34,7 +34,7 @@ if(isset($_GET['id'])) {
        //update quantity
        $_SESSION['cart'][$id] = $quan;
     }  else {
-        //$_SESSION['cart'][$id] = 1;
+        $_SESSION['cart'][$id] = 1;
         $out = "Please add a whole number to the cart";
     } // checks for bad input
 
