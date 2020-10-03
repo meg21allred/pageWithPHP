@@ -15,7 +15,14 @@ $query = "SELECT * FROM saleItems";
 $result = pg_query($db_connection, $query) or die("Cannot execute query: $query \n");
 
 
-echo "<table>";
+echo "<table>
+        <tr>
+            <td>Item</td>
+            <td></td>
+            <td>Price</td>
+            <td>Quantity</td>
+            <td></td>
+            </tr>";
 while ($row = pg_fetch_assoc($result)) {
 
    echo "
