@@ -12,13 +12,35 @@ $db_connection = pg_connect("host=$host dbname=$dbname user=$user password=$pass
 $result = pg_query($db_connection, "SELECT * FROM saleItems");
 
 echo $result;
-echo "is it working?"
+echo "is it working?";
+echo "<br>";
+echo "<table>";
+while($row = $result) {
+    echo "
+    
+    <tr>
+        <td>
+            {$row['name']}
+        </td>
+        <td> $ {$row['price']}</td>
+        <td>
+            <form action='{$_SERVER['PHP_SELF']}'}>
+                <input type='text' name='quan' id='quan'>
+                <input type='hidden' name='id' id='id' value='{$row['id']}'>
+                <input type='sumbit' value='Add to Cart'>
+            </form>
+        </td>
+    </tr>
+    
 
+
+    ";
+} // end of while loop
+echo "</table>";
 
 ?>
 
-</body>
-</html>
+
 
 
 
