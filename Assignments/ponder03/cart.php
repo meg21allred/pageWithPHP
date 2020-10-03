@@ -30,11 +30,10 @@ if(isset($_GET['id'])) {
         unset($_SESSION['cart'][$id]);
     }
 
-    if($quan > 0 && filter_var($quan, FILTER_VALIDATE_INT)) {
+    if($quan > 0 && filter_var($quan, FILTER_VALIDATE_INT) && !(is_string($quan))) {
        //update quantity
        $_SESSION['cart'][$id] = $quan;
     }  else {
-        $_SESSION['cart'][$id] = 1;
         $out = "Please add a whole number to the cart";
     } // checks for bad input
 
