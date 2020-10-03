@@ -25,17 +25,20 @@ if(isset($_GET['id'])) {
     $id = $_GET['id'];
     $quan = $_GET['quan'];
 
-    if($quan > 0 && filter_var($quan, FILTER_VALIDATE_INT)) {
-       //update quantity
-       $_SESSION['cart'][$id] = $quan;
-    }  else {
-        $out = "Please add a whole number to the cart";
-    } // checks for bad input
-
     if($quan == 0) {
         //remove item
         unset($_SESSION['cart'][$id]);
     }
+
+    if($quan > 0 && filter_var($quan, FILTER_VALIDATE_INT)) {
+       //update quantity
+       $_SESSION['cart'][$id] = $quan;
+    }  else {
+        //$_SESSION['cart'][$id] = 1;
+        $out = "Please add a whole number to the cart";
+    } // checks for bad input
+
+   
 }// end of isset
 
 $host = "ec2-3-224-97-209.compute-1.amazonaws.com";
