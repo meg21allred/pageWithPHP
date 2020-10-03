@@ -9,15 +9,19 @@ $port = "5432";
 
 $db_connection = pg_connect("host=$host dbname=$dbname user=$user password=$password");
 
-$result = pg_query($db_connection, "SELECT * FROM saleItems");
+$query = "SELECT * FROM saleItems";
 
-echo $result;
+$result = pg_query($db_connection, $query) or die("Cannot execute query: $query \n");
+
+echo $result. "<br>";
 echo "is it working?";
 echo "<br>";
-echo "<table>";
+
 while($row = pq_fetch_row($result)) {
     echo " $row[0] $row[1] $row[2] $row[3] \n";
 }
+
+pg_close($db_connection);
     // <tr>
     //     <td>
     //         {$row['name']}
@@ -33,7 +37,7 @@ while($row = pq_fetch_row($result)) {
     // </tr>
 
 
-    echo "</table>";
+   
 
 ?>
 
