@@ -35,7 +35,7 @@ if(isset($_GET['id'])) {
     } else {
         $out = "Please add a whole number to the cart";
     } // checks for bad input
-    $quan = 0;
+    $_SESSION['cart'][$id] = 0;
 }
 
 echo "<pre>";
