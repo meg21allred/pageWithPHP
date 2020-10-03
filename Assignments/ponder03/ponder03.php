@@ -1,5 +1,15 @@
 
-    <?php
+<?php
+
+SESSION_START();
+
+if(!(isset($_SESSION['cart']))) {
+    $_SESSION['cart'];
+} // end of session cart if
+
+echo "<pre>";
+print_r($_SESSION['cart']);
+echo "</pre>";
 
 $host = "ec2-3-224-97-209.compute-1.amazonaws.com";
 $user = "rxghsggtzmiezw";
