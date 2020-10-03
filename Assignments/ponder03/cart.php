@@ -25,10 +25,7 @@ if(isset($_GET['id'])) {
     $id = $_GET['id'];
     $quan = $_GET['quan'];
    
-    if (is_string($quan)) {
-        $out = "Please add a number to the cart";
-
-    } elseif($quan == 0) {
+    if($quan == 0) {
         //remove item
         unset($_SESSION['cart'][$id]);
     } elseif($quan > 0 && filter_var($quan, FILTER_VALIDATE_INT)) {
