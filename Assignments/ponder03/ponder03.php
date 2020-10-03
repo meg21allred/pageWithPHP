@@ -37,8 +37,6 @@ while ($row = pg_fetch_assoc($result)) {
 }
 echo "</table>";
 
-echo "what is happening";
-
 pg_close($db_connection);
     
 
