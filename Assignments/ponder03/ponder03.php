@@ -67,8 +67,9 @@ $query = "SELECT * FROM saleItems";
 
 $result = pg_query($db_connection, $query) or die("Cannot execute query: $query \n");
 
-
-echo "<table>
+echo "<center>";
+echo "<div class='table_div'>";
+echo "<table class='table'>
         <tr>
             <td>Item</td>
             <td></td>
@@ -98,7 +99,8 @@ while ($row = pg_fetch_assoc($result)) {
     ";
 }
 echo "</table>";
-
+echo "</div>";
+echo "</center>";
 
 pg_close($db_connection);
        
