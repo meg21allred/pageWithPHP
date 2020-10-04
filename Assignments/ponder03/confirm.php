@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Confirmation</title>
+    <link rel="stylesheet" href="ponder03.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+
 </head>
 <body>
+<div class="header">
+        <div class="inner_header">
+            <div class="logo_container"><h1>MY<span>BABIES</span></h1></div>
+                <div>
+                    <ul class="nav">
+                    <a href="ponder03.php"><li>HOME</li></a>
+                    </ul>
+            
+                </div>
+            
+        </div>
+</div>
     <?php
     SESSION_START();
 
@@ -23,17 +38,20 @@
     or die ("Could not connect to server\n");
 
 
-        $first = $_GET['first_name'];
-        $last = $_GET['last_name'];
-        $street = $_GET['street'];
-        $city = $_GET['city'];
-        $state = $_GET['state'];
-        $zip = $_GET['zip'];
+        $first = htmlspecialchars($_GET['first_name']);
+        $last = htmlspecialchars($_GET['last_name']);
+        $street = htmlspecialchars($_GET['street']);
+        $city = htmlspecialchars($_GET['city']);
+        $state = htmlspecialchars($_GET['state']);
+        $zip = htmlspecialchars($_GET['zip']);
+
+        echo "<center>";
+        echo "<div class='table_div'>";
 
         echo "<h1>Thank you " . $first . " " . $last . "!</h1>";
         echo "<h2>Your order of:</h2>";
         
-        
+    
             echo "<table>
                 <tr>
                     <td>Item</td>
@@ -66,6 +84,8 @@
         
         echo "<br><h2>will be sent to: " . 
             $street . ", " . $city . ", " . $state . " " . $zip . "</h2>";
+echo '</div>';
+echo '</center>';
 
             session_unset();
     ?>
