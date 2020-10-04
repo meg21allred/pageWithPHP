@@ -48,8 +48,8 @@
         echo "<center>";
         echo "<div class='table_div'>";
 
-        echo "<h1>Thank you " . $first . " " . $last . "!</h1>";
-        echo "<h2>Your order of:</h2>";
+        echo "<h1 class='message'>Thank you " . $first . " " . $last . "!</h1>";
+        echo "<h2 class='message'>Your order of:</h2>";
         
     
             echo "<table>
@@ -75,14 +75,14 @@
             } //for each loop
         
         echo "<tr>
-                    <td colspan='4'>Grand Total: $ $grand</td>
+                    <td class='grand' colspan='4'>Grand Total: $ $grand</td>
               </tr>";
         echo "</table>";
         
         
         
         
-        echo "<br><h2>will be sent to: " . 
+        echo "<br><h2 class='message'>will be sent to: " . 
             $street . ", " . $city . ", " . $state . " " . $zip . "</h2>";
 echo '</div>';
 echo '</center>';
