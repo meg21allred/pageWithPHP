@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="header">
-        <div class="inner_header"></div>
+        <div class="inner_header">
             <div class="logo_container"><h1>MY<span>BABIES</span></h1>
                 <div>
                     <ul class="nav">
@@ -20,6 +20,7 @@
             
                 </div>
             </div>
+        </div>
 </div>
 
 <a href="cart.php">View cart</a>
