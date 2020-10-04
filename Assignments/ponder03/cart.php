@@ -106,7 +106,7 @@ if(!empty($_SESSION['cart'])) {
     } //for each loop
 
 echo "<tr>
-            <td colspan='4'>Grand Total: $ $grand</td>
+            <td class='grand' colspan='4'>Grand Total: $ $grand</td>
       </tr>";
 echo "</table>";
 } else {
