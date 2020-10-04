@@ -65,8 +65,9 @@ $port = "5432";
 $db_connection = pg_connect("host=$host dbname=$dbname user=$user password=$password")
 or die ("Could not connect to server\n");
 
-echo "<div class='table_div'>";
 echo "<center>";
+echo "<div class='table_div'>";
+
 echo $out;
 
 $grand = 0;
