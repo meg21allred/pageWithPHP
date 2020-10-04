@@ -74,8 +74,11 @@ body {
 
 .table_div {
     background-color: white;
+    width: 65%;
+    padding-top: 50px;
 }
 
 table, td {
-        border: 1px solid darkgrey;
+    border: 1px solid darkgrey;
+    border-collapse: collapse;
 }
