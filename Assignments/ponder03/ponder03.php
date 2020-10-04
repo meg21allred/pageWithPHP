@@ -72,10 +72,10 @@ echo "<div class='table_div'>";
 echo "<table class='table'>
         <tr>
             <td>Item</td>
-            <td>Image</td>
+            <td></td>
             <td>Price</td>
             <td>Quantity</td>
-            <td>Add</td>
+            <td></td>
             </tr>";
 
 echo "$out";
@@ -88,13 +88,17 @@ while ($row = pg_fetch_assoc($result)) {
         </td>
         <td> <image src='{$row['image']}' width='150px'> </td>
         <td> $ {$row['price']}</td>
-        <td>
+       
             <form action='{$_SERVER['PHP_SELF']}'}>
+            <td>
                 <input type='text' name='quan' id='quan'>
                 <input type='hidden' name='id' id='id' value='{$row['id']}'>
+                </td>
+                <td>
                 <input type='submit' value='Add to Cart'>
+                </td>
             </form>
-        </td>
+        
     </tr>
     ";
 }
