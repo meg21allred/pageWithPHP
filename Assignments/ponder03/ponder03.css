@@ -117,4 +117,6 @@ td {
     font-family: 'Montserrat';
     font-size: 18px;
     width: 100%;
+    text-align: left;
+    padding-right: 20px;
 }
