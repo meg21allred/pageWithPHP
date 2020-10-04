@@ -14,7 +14,7 @@
 
     <div>
     <span>Fill out the following information: </span><br><br>
-    <form action="confirm.php" method="get">
+    <form action=<?php echo 'htmlspecialchars("confirm.php")';?> method="get">
         <label for="first_name">First Name: </label><input type="text" name="first_name" required><br>
         <label for="last_name"></label>Last Name: <input type="text" name="last_name"><br>
         <label for="street"></label>Street Address: <input type="text" name="street"><br>
