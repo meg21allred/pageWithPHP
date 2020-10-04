@@ -107,8 +107,14 @@ td {
     font-size: 18px;
 }
 
-.user_form {
-    width: 50%;
+.user_div {
+    width: 25%;
     background-color: white;
     padding: 50px;
+}
+
+.user_form {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    width: 100%;
 }
