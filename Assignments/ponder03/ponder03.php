@@ -9,10 +9,9 @@
 </head>
 <body>
 <div class="header">
-        <div class="inner_header">
-        </div>
+        <div class="inner_header"></div>
             <div class="logo_container"><h1>MY<span>BABIES</span></h1>
-                </div>
+                <div>
                     <ul class="nav">
                     <a href="ponder03.php"><li>HOME</li></a>
                     <a href="cart.php"><li>VIEW CART</li></a>
