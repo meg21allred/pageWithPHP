@@ -15,7 +15,6 @@
                     <ul class="nav">
                     <a href="ponder03.php"><li>HOME</li></a>
                     <a href="cart.php"><li>VIEW CART</li></a>
-                    <?php echo "<a href='ponder03.php?clear=1'><li>Clear Cart</li></a>";?> 
                     </ul>
             
                 </div>

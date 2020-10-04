@@ -54,6 +54,6 @@ body {
 .nav a {
     height: 100%;
     display: table;
-    float: right;
+    float: left;
     padding: 0px 20px;
 }
