@@ -8,7 +8,8 @@
 </head>
 <body>
 <div class="header">
-
+    <div class="inner_header">
+    </div>
 </div>
 
 <a href="cart.php">View cart</a>
