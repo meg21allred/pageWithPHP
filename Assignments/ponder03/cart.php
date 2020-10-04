@@ -16,7 +16,7 @@
                     <ul class="nav">
                     <a href="ponder03.php"><li>HOME</li></a>
                     <a href="checkOut.php"><li>CHECKOUT</li></a>
-                    <?php echo "<a href='ponder03.php?clear=1'><li>CLEAR CART</li><a>"; ?>
+                    <?php echo "<a href='cart.php?clear=1'><li>CLEAR CART</li><a>"; ?>
                     </ul>
             
                 </div>
@@ -110,7 +110,7 @@ echo "<tr>
       </tr>";
 echo "</table>";
 } else {
-    echo "<h1 class='empty cart'>Your Cart is Empty</h1>";
+    echo "<h1 class='empty_cart'>Your Cart is Empty</h1>";
 } //end of if cart is not empty
 
 
