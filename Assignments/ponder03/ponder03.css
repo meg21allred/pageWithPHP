@@ -90,3 +90,7 @@ table, td {
     border-collapse: collapse;
     
 }
+
+td {
+    align-items: center;
+}
