@@ -10,7 +10,7 @@
 <body>
 <div class="header">
     <div class="inner_header">
-    <div class="logo_container"><h1>MY<span>SITE</span></h1></div>
+    <div class="logo_container"><h1>MY<span>BABIES</span></h1></div>
     </div>
 </div>
 
