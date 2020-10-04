@@ -81,4 +81,7 @@ body {
 table, td {
     border: 1px solid darkgrey;
     border-collapse: collapse;
+    width: 100%;
+    font-family: 'Montserrat';
+    font-size: 16px;
 }
