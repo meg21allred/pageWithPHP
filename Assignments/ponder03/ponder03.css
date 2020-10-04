@@ -29,6 +29,7 @@ body {
     height: 100%;
     display: table;
     float: left;
+    margin-bottom: 50px;
 }
 
 .logo_container h1 {
@@ -75,7 +76,7 @@ body {
 .table_div {
     background-color: white;
     width: 65%;
-    padding-top: 50px;
+
 }
 
 table {

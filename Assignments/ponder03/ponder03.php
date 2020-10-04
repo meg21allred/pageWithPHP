@@ -72,10 +72,10 @@ echo "<div class='table_div'>";
 echo "<table class='table'>
         <tr>
             <td>Item</td>
-            <td></td>
+            <td>Image</td>
             <td>Price</td>
             <td>Quantity</td>
-            <td></td>
+            <td>Add</td>
             </tr>";
 
 echo "$out";
