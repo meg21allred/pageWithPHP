@@ -102,7 +102,13 @@ td {
 }
 
 .grand {
-    text-align: left;
+    text-align: right;
     font-weight: 800;
-    font-size: 16px;
+    font-size: 18px;
+}
+
+.user_form {
+    width: 50%;
+    background-color: white;
+    padding: 50px;
 }

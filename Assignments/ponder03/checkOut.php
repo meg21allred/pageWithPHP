@@ -3,16 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Checkout</title>
+    <link rel="stylesheet" href="ponder03.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
 </head>
 <body>
+<div class="header">
+        <div class="inner_header">
+            <div class="logo_container"><h1>MY<span>BABIES</span></h1></div>
+                <div>
+                    <ul class="nav">
+                    <a href="ponder03.php"><li>HOME</li></a>
+                    <a href="confirm.php"><li>CONFRIM PURCHASE</li></a>
+                    
+                    </ul>
+            
+                </div>
+            
+        </div>
+</div>
     <?php
     SESSION_START();
 
     echo "This is the checkout page";
     ?>
 
-    <div>
+    <center>
+    <div class="user_form">
     <span>Fill out the following information: </span><br><br>
     <form action=<?php echo 'htmlspecialchars("confirm.php")';?> method="get">
         <label for="first_name">First Name: </label><input type="text" name="first_name" required><br>
@@ -24,6 +41,7 @@
         <input type="submit" value="Confirm Purchase">
     </form>
     </div>
+</center>
 
 
 </body>
