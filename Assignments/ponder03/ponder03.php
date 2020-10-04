@@ -15,6 +15,7 @@
                     <ul class="nav">
                     <a href="ponder03.php"><li>HOME</li></a>
                     <a href="cart.php"><li>VIEW CART</li></a>
+                    <?php echo "<a href='ponder03.php?clear=1'><li>CLEAR CART</li><a>"; ?>
                     </ul>
             
                 </div>
@@ -22,7 +23,6 @@
         </div>
 </div>
 
-<a href="cart.php">View cart</a>
 <?php
 SESSION_START();
 
@@ -99,7 +99,6 @@ while ($row = pg_fetch_assoc($result)) {
 }
 echo "</table>";
 
-echo "<a href='ponder03.php?clear=1'>Clear Cart</a>";
 
 pg_close($db_connection);
        
