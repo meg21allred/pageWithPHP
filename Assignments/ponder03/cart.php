@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cart</title>
+    <link rel="stylesheet" href="ponder03.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+
 </head>
 <body>
+<div class="header">
+        <div class="inner_header">
+            <div class="logo_container"><h1>MY<span>BABIES</span></h1></div>
+                <div>
+                    <ul class="nav">
+                    <a href="ponder03.php"><li>HOME</li></a>
+                    <a href="checkOut.php"><li>CHECKOUT</li></a>
+                    <?php echo "<a href='ponder03.php?clear=1'><li>CLEAR CART</li><a>"; ?>
+                    </ul>
+            
+                </div>
+            
+        </div>
+</div>
 
-<a href="ponder03.php">Continue Shopping</a>
 <?php
 
 SESSION_START();
@@ -49,7 +65,10 @@ $port = "5432";
 $db_connection = pg_connect("host=$host dbname=$dbname user=$user password=$password")
 or die ("Could not connect to server\n");
 
+echo "<div class='table_div'>";
+echo "<center>"
 echo $out;
+
 $grand = 0;
 if(!empty($_SESSION['cart'])) {
     echo "<table>
@@ -90,17 +109,17 @@ echo "<tr>
       </tr>";
 echo "</table>";
 } else {
-    echo "<h1>Your Cart is Empty</h1>";
+    echo "<h1 class='empty cart'>Your Cart is Empty</h1>";
 } //end of if cart is not empty
 
 
-echo "<a href='cart.php?clear=1'>Clear Cart</a>";
-
+echo "</div>";
+echo "</center>";
 pg_close($db_connection);
        
 ?>
 
-<a href="checkOut.php">Check out</a>
+
 </body>
 </html>
 

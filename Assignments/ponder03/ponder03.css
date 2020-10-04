@@ -94,3 +94,8 @@ table, td {
 td {
     text-align: center;
 }
+
+.empty_cart {
+    color: white;
+    font-family: 'Monserrat';
+}
