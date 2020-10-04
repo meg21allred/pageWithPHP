@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="ponder03.css">
 </head>
 <body>
+<div class="header">
+
+</div>
+
 <a href="cart.php">View cart</a>
 <?php
 SESSION_START();
