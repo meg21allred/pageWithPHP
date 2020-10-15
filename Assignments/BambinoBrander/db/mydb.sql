@@ -34,3 +34,33 @@ CREATE TABLE pickedNames (
     FOREIGN KEY (login_id) REFERENCES user_login(id)
 );
 
+-- girl names
+INSERT INTO girl_names (girl_name, def, origin) VALUES ('Abbey', 'Nunnery', 'English');
+INSERT INTO girl_names (girl_name, def, origin) VALUES ('Amelia', 'Work', 'Latin');
+INSERT INTO girl_names (girl_name, def, origin) VALUES ('Violet', 'Purple', 'English');
+INSERT INTO girl_names (girl_name, def, origin) VALUES ('Aria', 'Solo Melody', 'Italian');
+INSERT INTO girl_names (girl_name, def, origin) VALUES ('Vivienne', 'Alive', 'French');
+INSERT INTO girl_names (girl_name, def, origin) VALUES ('Genevieve', 'Woman of the Family', 'French');
+INSERT INTO girl_names (girl_name, def, origin) VALUES ('Freya', 'Goddess of Love', 'Scandinavian');
+INSERT INTO girl_names (girl_name, def, origin) VALUES ('Sophia', 'Wisdom', 'Greek');
+INSERT INTO girl_names (girl_name, def, origin) VALUES ('Lorelei', 'Alluring Enchantress', 'German');
+INSERT INTO girl_names (girl_name, def, origin) VALUES ('Ophelia', 'Helper', 'Greek');
+
+-- boy names
+INSERT INTO boy_names (boy_name, def, origin) VALUES ('Finn', 'Fair', 'Irish');
+INSERT INTO boy_names (boy_name, def, origin) VALUES ('Emmett', 'Entire', 'English');
+INSERT INTO boy_names (boy_name, def, origin) VALUES ('Archer', 'Bowman', 'English');
+INSERT INTO boy_names (boy_name, def, origin) VALUES ('Wyatt', 'Son of Guy', 'English');
+INSERT INTO boy_names (boy_name, def, origin) VALUES ('Harrison', 'Son of Harry', 'English');
+INSERT INTO boy_names (boy_name, def, origin) VALUES ('Rowan', 'From the Rowan Tree', 'English');
+INSERT INTO boy_names (boy_name, def, origin) VALUES ('Maxwell', 'From the Spring of Maccus', 'Irish');
+INSERT INTO boy_names (boy_name, def, origin) VALUES ('Grayson', 'Son of the Grey-Haired One', 'English');
+INSERT INTO boy_names (boy_name, def, origin) VALUES ('Landon', 'From the Long Hill', 'English');
+INSERT INTO boy_names (boy_name, def, origin) VALUES ('Miles', 'Soldier', 'Latin');
+INSERT INTO boy_names (boy_name, def, origin) VALUES ('Theo', 'Divine Gift', 'Greek');
+
+
+
+
+
+
