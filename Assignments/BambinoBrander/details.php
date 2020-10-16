@@ -29,7 +29,8 @@ catch (PDOException $ex)
 echo 'Error!: ' . $ex->getMessage();
 die();
 }
-echo "<h1>Girl Names</h1><br>";
+echo "<h1>Name Details</h1><br>";
+
 $id = $_GET['id'];
    
    echo "<ul>";

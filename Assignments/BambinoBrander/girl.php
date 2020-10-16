@@ -48,8 +48,11 @@
                 $name = $sRow["girl_name"];
                 $def = $sRow["def"];
                 $origin = $sRow["origin"];
+                $gId = $sRow["id"];
+
                 echo "<li>";
-                echo "<strong>$name</strong> <a href='details.php?id=$id value='Name details'>";
+                echo "<strong>$name</strong>: ";
+                echo "<a href='details.php?id=$gId'>Name Details</a>";
                 echo "</li>";
                     
                
@@ -58,6 +61,7 @@
         echo "</ul>";
 
     ?>
+
 
     <!-- maybe add an add to list button for names you like? -->
     <input type="button" onClick="location.href='girl.php?id=<?php if ($id < 10) { echo $id+1; } else {$id = 1; echo $id;} ?>'" value="next">
