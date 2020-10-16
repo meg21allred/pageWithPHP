@@ -28,7 +28,7 @@
             echo 'Error!: ' . $ex->getMessage();
             die();
             }
-            echo "<h1>Girl Names</h1><br>";
+            echo "<h1>Boy Names</h1><br>";
             
             echo "<ul>";
 
