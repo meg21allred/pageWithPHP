@@ -51,7 +51,7 @@
                 echo "<li>";
                 echo "<strong>$name</strong> <br> Definition: $def <br> Origin: $origin";
                 echo "</li>";
-                    $id++;
+                    
                
             }
 
@@ -73,7 +73,7 @@
 
     ?>
 
-    <input type="button" onClick="location.href='girl.php?id=$id'" value="next">
+    <input type="button" onClick="location.href='girl.php?id=<?php echo $id++; ?>'" value="next">
     
 </body>
 </html>
