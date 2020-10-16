@@ -8,7 +8,6 @@
 <body>
 
 <?php
-sessions_start();
 
         try
         {
@@ -34,11 +33,7 @@ sessions_start();
         echo "<h1>Girl Names</h1><br>";
         
      
-        if (isset($_GET['id'])) {
-            $id = $_GET['id'];
-        } else {
-            $id = 1;
-        }
+       $id = $_GET['id'];
 
         echo $id;
 
@@ -57,12 +52,12 @@ sessions_start();
                 echo "<strong>$name</strong> <br> Definition: $def <br> Origin: $origin";
                 echo "</li>";
 
-                $id++;
+               
             }
 
         echo "</ul>";
 
-        echo "$id";
+        
 
 
 
@@ -78,7 +73,7 @@ sessions_start();
 
     ?>
 
-    <input type="button" onClick="location.href='girl.php'" value="next">
+    <input type="button" onClick="location.href='girl.php?id=<?php echo $id++;?>'" value="next">
     
 </body>
 </html>
