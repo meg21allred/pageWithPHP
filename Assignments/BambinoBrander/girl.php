@@ -37,7 +37,7 @@
 
         echo $id;
 
-        echo "<input type='button' onClick='location.href='boyNames.php'' value='next'>";
+       
         echo "<ul>";
 
         $girlNames = $db->prepare("SELECT * FROM girl_names WHERE id = :id");
@@ -70,6 +70,8 @@
     // echo "</ul>";
 
     ?>
+
+    <input type="button" onClick="location.href='boyList.php'" value="next">
     
 </body>
 </html>
