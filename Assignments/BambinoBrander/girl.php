@@ -57,6 +57,8 @@
 
         echo "</ul>";
 
+        echo "$id";
+
 
 
 
