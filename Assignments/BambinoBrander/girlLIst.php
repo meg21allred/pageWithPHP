@@ -6,8 +6,6 @@
     <title>Girl Names</title>
 </head>
 <body>
-
-
 <?php
     try
     {
