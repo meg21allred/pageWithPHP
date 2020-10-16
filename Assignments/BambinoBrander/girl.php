@@ -8,6 +8,8 @@
 <body>
 
 <?php
+sessions_start();
+
         try
         {
         $dbUrl = getenv('DATABASE_URL');
