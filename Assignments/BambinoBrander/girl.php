@@ -31,16 +31,40 @@
         }
         echo "<h1>Girl Names</h1><br>";
         
+     
+
+        $id = 1;
+
+        echo $id;
+
         echo "<ul>";
 
-    foreach ($db->query("SELECT * FROM girl_names") as $row)
-    {
-    echo "<li>";
-    echo "<strong>" . $row['girl_name'] . "</strong> " . "<br>     Definition: " . $row['def'] . "<br>     Origin: " . $row['origin'];
-    echo "</li>";
-    }
+        $girlNames = $db->prepare("SELECT * FROM girl_names WHERE id = :id");
+                        $girlNames->execute(array(':id' => $id));
 
-    echo "</ul>";
+            while ($sRow = $girlNames->fetch(PDO::FETCH_ASSOC))
+            {
+                $name = $sRow["girl_name"];
+                $def = $sRow["def"];
+                $origin = $sRow["orign"];
+                echo "<li>";
+                echo "<strong>$name</strong> <br> Definition: $def <br> Origin: $origin";
+                echo "</li>";
+            }
+
+        echo "</ul>";
+
+
+
+
+    // foreach ($db->query("SELECT * FROM girl_names") as $row)
+    // {
+    // echo "<li>";
+    // echo "<strong>" . $row['girl_name'] . "</strong> " . "<br>     Definition: " . $row['def'] . "<br>     Origin: " . $row['origin'];
+    // echo "</li>";
+    // }
+
+    // echo "</ul>";
 
     ?>
     
