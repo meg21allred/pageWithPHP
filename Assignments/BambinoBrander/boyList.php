@@ -44,7 +44,7 @@
         //loop through ids
             while ($sRow = $boyNames->fetch(PDO::FETCH_ASSOC))
             {
-                $name = $sRow["girl_name"];
+                $name = $sRow["boy_name"];
                 $def = $sRow["def"];
                 $origin = $sRow["origin"];
                 $bId = $sRow["id"];
