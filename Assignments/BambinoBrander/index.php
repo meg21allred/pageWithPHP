@@ -8,7 +8,7 @@
 <body>
     <h1>Welcom to Bambino Brander</h1>
     <h2>choose a Gender</h2>
-    <input type="button" value="Girl" onClick="location.href='girlList.php">
+    <input type="button" value="Girl" onClick="location.href='girlList.php'">
     <input type="button" value="Boy" onClick="location.href='boyList.php'">
 
     
