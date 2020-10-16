@@ -71,7 +71,7 @@
 
     ?>
 
-    <input type="button" onClick="location.href='boyList.php'" value="next">
+    <input type="button" onClick="location.href='girl.php'" value="next">
     
 </body>
 </html>
