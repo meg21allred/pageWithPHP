@@ -6,7 +6,8 @@
     <title>Girl Names</title>
 </head>
 <body>
-
+<h1>Girl Names</h1>
+<input type="button" onClick="location.href='index.php'" value="Home">
 <?php
 
 // connect to database
@@ -31,7 +32,6 @@
         echo 'Error!: ' . $ex->getMessage();
         die();
         }
-        echo "<h1>Girl Names</h1><br>";
         
      //get id variable
        $id = $_GET['id'];
