@@ -73,7 +73,7 @@
 
     ?>
 
-    <input type="button" onClick="location.href='girl.php?id=<?php echo $id+1; ?>'" value="next">
+    <input type="button" onClick="location.href='girl.php?id=<?php if ($id < 10) { echo $id+1; } else {$id = 1; echo $id;} ?>'" value="next">
     
 </body>
 </html>
