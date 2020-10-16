@@ -41,7 +41,7 @@ $id = $_GET['id'];
    //loop through ids
        while ($sRow = $girlNames->fetch(PDO::FETCH_ASSOC))
        {
-           $name = $sRow["girl_name"];
+           $name = $sRow["boy_name"];
            $def = $sRow["def"];
            $origin = $sRow["origin"];
            echo "<li>";
