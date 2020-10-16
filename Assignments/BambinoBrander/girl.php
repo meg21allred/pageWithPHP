@@ -73,7 +73,7 @@
 
     ?>
 
-    <input type="button" onClick="location.href='girl.php?id=<?php echo $id++; ?>'" value="next">
+    <input type="button" onClick="location.href='girl.php?id=<?php echo $id+1; ?>'" value="next">
     
 </body>
 </html>
