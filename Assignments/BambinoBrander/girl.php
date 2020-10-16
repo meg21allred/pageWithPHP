@@ -37,6 +37,7 @@
 
         echo $id;
 
+        echo `<input type='button' onClick='location.href="girl.php"' value='next'>`;
         echo "<ul>";
 
         $girlNames = $db->prepare("SELECT * FROM girl_names WHERE id = :id");
@@ -46,10 +47,12 @@
             {
                 $name = $sRow["girl_name"];
                 $def = $sRow["def"];
-                $origin = $sRow["orign"];
+                $origin = $sRow["origin"];
                 echo "<li>";
                 echo "<strong>$name</strong> <br> Definition: $def <br> Origin: $origin";
                 echo "</li>";
+
+                $id++;
             }
 
         echo "</ul>";
