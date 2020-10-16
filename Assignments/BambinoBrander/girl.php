@@ -32,8 +32,11 @@
         echo "<h1>Girl Names</h1><br>";
         
      
-
-        $id = $_GET['id'];
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+        } else {
+            $id = 1;
+        }
 
         echo $id;
 
