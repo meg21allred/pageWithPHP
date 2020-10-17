@@ -50,6 +50,7 @@
 
                     echo "<li>";
                     echo "<strong class='boyBabyName'>$name</strong>: ";
+                    echo "<br>";
                     echo "<a class='boyDetailsLink' href='boyDetails.php?id=$bId'>Name Details</a>";
                     echo "</li>";
                         
