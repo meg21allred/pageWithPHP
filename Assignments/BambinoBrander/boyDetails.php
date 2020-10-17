@@ -47,7 +47,7 @@
                     $def = $sRow["def"];
                     $origin = $sRow["origin"];
                     echo "<li>";
-                    echo "<strong class='boyBabyName'>$name</strong> <br> <span class='details' Definition: $def <br> Origin: $origin</span>";
+                    echo "<strong class='boyBabyName'>$name</strong> <br> <span class='details'> Definition: $def <br> Origin: $origin</span>";
                     echo "</li>";
                         
                     
