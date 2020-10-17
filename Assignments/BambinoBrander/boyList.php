@@ -27,8 +27,8 @@
     </div>
     <br><br><br>
     <center>
-        <h1>Boy Names</h1>
-        <input type="button" onClick="location.href='index.php'" value="Home">
+        <h1 class="blueText">Boy Names</h1>
+        
         <?php
             
         //get id variable
@@ -49,8 +49,8 @@
                     $bId = $sRow["id"];
 
                     echo "<li>";
-                    echo "<strong>$name</strong>: ";
-                    echo "<a href='boyDetails.php?id=$bId'>Name Details</a>";
+                    echo "<strong class='boyBabyName'>$name</strong>: ";
+                    echo "<a class='boyDetailsLink' href='boyDetails.php?id=$bId'>Name Details</a>";
                     echo "</li>";
                         
                 
@@ -60,7 +60,7 @@
         ?>
 
         <!-- maybe add an add to list button for names you like? -->
-        <input type="button" onClick="location.href='boyList.php?id=<?php if ($id < 11) { echo $id+1; } else {$id = 1; echo $id;} ?>'" value="next">
+        <input class="btn boy" type="button" onClick="location.href='boyList.php?id=<?php if ($id < 11) { echo $id+1; } else {$id = 1; echo $id;} ?>'" value="next">
 
     </center>
 
