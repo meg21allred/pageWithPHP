@@ -111,10 +111,14 @@ body {
 
 .boyBabyName {
     color: #7dcbf9;
-    font-size: 30px;
+    font-size: 60px;
 }
 
-.boyDetailsLInk {
+.boyDetailsLink {
     color: white;
     font-size: 25px;
+}
+
+.boyDetailsLink:visited {
+    color: #cc0099;
 }
