@@ -60,8 +60,9 @@
 
         ?>
 
+<br>
 <form>
- <input type="button" value="Go back!" onclick="history.back()">
+ <input class="btn girl" type="button" value="Back to Names" onclick="history.back()">
 </form>
     </center>
 
