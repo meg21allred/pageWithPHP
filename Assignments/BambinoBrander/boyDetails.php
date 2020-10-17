@@ -56,7 +56,7 @@
             echo "</ul>";
 
         ?>
-
+<br>
 <form>
  <input class="btn boy" type="button" value="Back to Names" onclick="history.back()">
 </form>
