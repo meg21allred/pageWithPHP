@@ -58,6 +58,7 @@
 
             echo "</ul>";
         ?>
+        <br>
         <!-- maybe add an add to list button for names you like? -->
         <input class="btn boy" type="button" onClick="location.href='boyList.php?id=<?php if ($id < 11) { echo $id+1; } else {$id = 1; echo $id;} ?>'" value="next">
 
