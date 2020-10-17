@@ -27,11 +27,11 @@
         </div>
     </div>
 
-    <br><br><br>
+    <br><br><br><br><br>
 
     <center>
-    <h1>Girl Names</h1>
-    <input type="button" onClick="location.href='index.php'" value="Home">
+    <h1 class="pinkText">Girl Names</h1>
+
     <?php
   
        //get id variable
@@ -52,8 +52,9 @@
                 $gId = $sRow["id"];
 
                 echo "<li>";
-                echo "<strong>$name</strong>: ";
-                echo "<a href='details.php?id=$gId'>Name Details</a>";
+                echo "<strong class='girlBabyName'>$name</strong>: ";
+                echo "<br>";
+                echo "<a class='detailsLink' href='details.php?id=$gId'>Name Details</a>";
                 echo "</li>";
                     
                
@@ -63,6 +64,7 @@
 
     ?>
 
+    <br><br>
 
     <!-- maybe add an add to list button for names you like? -->
     <input type="button" onClick="location.href='girl.php?id=<?php if ($id < 10) { echo $id+1; } else {$id = 1; echo $id;} ?>'" value="next">

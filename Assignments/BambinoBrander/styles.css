@@ -114,11 +114,17 @@ body {
     font-size: 80px;
 }
 
-.boyDetailsLink {
+.detailsLink {
     color: white;
     font-size: 25px;
 }
 
-.boyDetailsLink:visited {
+.detailsLink:visited {
     color: #cc0099;
 }
+
+.girlBabyName {
+    color: #f7a7e3;
+    font-size: 80px;
+}
+
