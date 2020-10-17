@@ -31,6 +31,7 @@
 
     <center>
     <h1 class="pinkText">Girl Names</h1>
+    <br>
 
     <?php
   
