@@ -26,11 +26,11 @@
         </div>
     </div>
 
-    <br><br><br>
+    <br><br><br><br><br>
     <center>
         <?php
 
-            echo "<h1>Name Details</h1><br>";
+            echo "<h1 class='blueText'>Name Details</h1><br>";
 
             $id = $_GET['id'];
             
@@ -47,7 +47,7 @@
                     $def = $sRow["def"];
                     $origin = $sRow["origin"];
                     echo "<li>";
-                    echo "<strong>$name</strong> <br> Definition: $def <br> Origin: $origin";
+                    echo "<strong class='boyBabyName'>$name</strong> <br> <span class='details' Definition: $def <br> Origin: $origin</span>";
                     echo "</li>";
                         
                     
@@ -56,6 +56,10 @@
             echo "</ul>";
 
         ?>
+
+<form>
+ <input class="btn boy" type="button" value="Back to Names" onclick="history.back()">
+</form>
     </center>
 
 </body>
