@@ -67,7 +67,7 @@
     <br><br>
 
     <!-- maybe add an add to list button for names you like? -->
-    <input type="button" onClick="location.href='girl.php?id=<?php if ($id < 10) { echo $id+1; } else {$id = 1; echo $id;} ?>'" value="next">
+    <input class="btn girl" type="button" onClick="location.href='girl.php?id=<?php if ($id < 10) { echo $id+1; } else {$id = 1; echo $id;} ?>'" value="next">
 
     </center>
     
