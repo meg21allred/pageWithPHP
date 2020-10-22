@@ -20,7 +20,7 @@
     if($num == 1) {
         $_SESSION['userName'] = $user;
         echo "login successful";
-        header('location:index.php');
+       // header('location:index.php');
     } else {
         echo "login unsuccessful";
 
