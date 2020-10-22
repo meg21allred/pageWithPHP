@@ -23,18 +23,18 @@
     </div>
     <br><br><br><br>
 <center>
-    <h1 class="title">Resgister</h1>
+    <h1 class="title">Resgister</h1><br>
     <h2 class="small_title">Enter the following:</h2>
     <div>
         <form class="userForm" action="registrationSuccess.php" method="post">
             <label for="userName" class="labels">User name: </label>
-            <input type="text" name="userName"><br>
+            <input type="text" name="userName"><br><br>
             <label for="email" class="labels">Email: </label>
-            <input type="text" name="email"><br>
+            <input type="text" name="email"><br><br>
             <label for="userPassword" class="labels">Password: </label>
-            <input type="password" name="userPassword"><br>
+            <input type="password" name="userPassword"><br><br>
             <label for="comfirmPassword" class="labels">Comfirm password: </label>
-            <input type="password" name="comfirmPassword"><br>
+            <input type="password" name="comfirmPassword"><br><br>
             <button type="submit" class="btn boy">Submit</button>
 
         </form>
