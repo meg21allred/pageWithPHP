@@ -1,7 +1,3 @@
-<?php 
-    require_once("config.php"); 
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +9,7 @@
     <h1>Login</h1>
     <center>
     <div>
-        <form action="index.php" method="post">
+        <form action="loginSuccess.php" method="post">
             <label for="userName" class="labels">Enter user name: </label>
             <input type="text" name="userName" placeholder="user name..."><br>
             <label for="userPassword" class="labels">Enter password: </label>

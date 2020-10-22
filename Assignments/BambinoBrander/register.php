@@ -1,7 +1,3 @@
-<?php 
-    require_once("config.php"); 
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +10,7 @@
     <h1>Resgister</h1>
     <h2>Enter the following:</h2>
     <div>
-        <form action="index.php" method="post">
+        <form action="registrationSuccess.php" method="post">
             <label for="userName" class="labels">User name: </label>
             <input type="text" name="userName" placeholder="user name..."><br>
             <label for="email" class="labels">Email: </label>
