@@ -66,12 +66,16 @@ body {
 }
 
 .nav a li {
-    padding-top: 25px;
+    margin-top: 25px;
     display: table-cell;
     height: 100%;
     color: #cc0099;
     font-family: 'Montserrat';
     font-size: 20px;
+    
+}
+
+.loginLink {
     border: 1px solid #cc0099;
     padding: 6px 14px;
 }
