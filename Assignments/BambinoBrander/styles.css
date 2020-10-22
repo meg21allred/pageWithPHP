@@ -140,3 +140,16 @@ body {
     font-size: 25px;
 }
 
+.userForm {
+    background-color: #f7a7e3;
+    width: 300px;
+    text-align: left;
+    padding: 20px;
+    color: #cc0099;
+
+}
+
+.title {
+    font-size: 50px;
+    color: #ffffff;
+}
