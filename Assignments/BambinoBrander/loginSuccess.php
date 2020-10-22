@@ -8,8 +8,9 @@
     $user = $_POST['userName'];
     $password = $_POST['userPassword'];
     $num = 0;
+    $dPassword = "";
 
-    $checkEmail = $db->prepare("SELECT userName, userPassword FROM user_login Where userName = :userName");
+    $checkEmail = $db->prepare("SELECT * FROM user_login Where userName = :userName");
     $checkEmail->execute(array(':userName' => $user));
 
     while ($row = $checkEmail->fetch(PDO::FETCH_ASSOC)) {
@@ -20,6 +21,7 @@
         }
         
     }
+echo $dPassword . " " . $password;
 
     if($num == 1) {
         $_SESSION['userName'] = $user;
