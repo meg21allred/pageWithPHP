@@ -71,7 +71,7 @@ body {
     height: 100%;
     color: #cc0099;
     font-family: 'Montserrat';
-    font-size: 20px;
+    font-size: 10px;
 }
 
 .nav a li:hover {
@@ -138,6 +138,6 @@ body {
 }
 
 .loginLink {
-    border: 1px solid  #cc0099;
+    border: 1px solid #cc0099;
     padding: 6px 14px;
 }
