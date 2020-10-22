@@ -3,7 +3,8 @@
 CREATE TABLE user_login (
     id SERIAL PRIMARY KEY,
     userName VARCHAR(255) NOT NULL,
-    userPassword VARCHAR(255) NOT NULL
+    userPassword VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL
     
 );
 

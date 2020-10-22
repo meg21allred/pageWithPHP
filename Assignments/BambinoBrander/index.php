@@ -15,6 +15,7 @@
                 <div>
                     <ul class="nav">
                     <a href="index.php"><li>HOME</li></a>
+                    <a href="login.php" class="loginLink"><li>LOG IN</li></a>
                     </ul>
             
                 </div>
