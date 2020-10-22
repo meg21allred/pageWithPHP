@@ -10,8 +10,8 @@
     $password = $_POST['userPassword'];
     $num = 0;
 
-    $checkEmail = $db->prepare("SELECT userName, userPassword FROM user_login Where userName = :userName && userPassword = :userPassword");
-    $checkEmail->execute(array(':userName' => $user, ':userPassword' =>$password));
+    $checkEmail = $db->prepare("SELECT userName FROM user_login Where userName = :userName");
+    $checkEmail->execute(array(':userName' => $user));
 
     while ($row = $checkEmail->fetch(PDO::FETCH_ASSOC)) {
         $num++;
