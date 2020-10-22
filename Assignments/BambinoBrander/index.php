@@ -33,7 +33,6 @@ session_start();
 
 <center>
     <br>
-    <?php echo "userName: " . $_SESSION['userName']; ?>
     <br>
     <br>
     <h1 class="blueText">Welcome!</h1>
