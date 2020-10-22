@@ -3,7 +3,7 @@
 
     $user = $_POST['userName'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $password = $_POST['userPassword'];
 
 
    echo "registration successful!" . $user . $email . $password;

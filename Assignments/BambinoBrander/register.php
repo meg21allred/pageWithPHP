@@ -16,7 +16,7 @@
             <label for="email" class="labels">Email: </label>
             <input type="text" name="email" placeholder="email..."><br>
             <label for="userPassword" class="labels">Password: </label>
-            <input type="text" name="userName" placeholder="password..."><br>
+            <input type="text" name="userPassword" placeholder="password..."><br>
             <label for="comfirmPassword" class="labels">Comfirm password: </label>
             <input type="password" name="comfirmPassword" placeholder="comfirm password..."><br>
             <button type="submit" class="btn boy">Submit</button>
