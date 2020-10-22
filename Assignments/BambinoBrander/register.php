@@ -4,21 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="header">
+        <div class="inner_header">
+            <div class="logo_container"><h1>Bambino<span>Brander</span></h1></div>
+                <div>
+                    <ul class="nav">
+                    <a href="index.php"><li>HOME</li></a>
+                    
+                    </ul>
+            
+                </div>
+            
+        </div>
+    </div>
+    <br><br><br><br>
 <center>
-    <h1>Resgister</h1>
-    <h2>Enter the following:</h2>
+    <h1 class="title">Resgister</h1>
+    <h2 class="small_title">Enter the following:</h2>
     <div>
-        <form action="registrationSuccess.php" method="post">
+        <form class="userForm" action="registrationSuccess.php" method="post">
             <label for="userName" class="labels">User name: </label>
-            <input type="text" name="userName" placeholder="user name..."><br>
+            <input type="text" name="userName"><br>
             <label for="email" class="labels">Email: </label>
-            <input type="text" name="email" placeholder="email..."><br>
+            <input type="text" name="email"><br>
             <label for="userPassword" class="labels">Password: </label>
-            <input type="password" name="userPassword" placeholder="password..."><br>
+            <input type="password" name="userPassword"><br>
             <label for="comfirmPassword" class="labels">Comfirm password: </label>
-            <input type="password" name="comfirmPassword" placeholder="comfirm password..."><br>
+            <input type="password" name="comfirmPassword"><br>
             <button type="submit" class="btn boy">Submit</button>
 
         </form>
