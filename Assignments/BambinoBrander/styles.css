@@ -66,12 +66,12 @@ body {
 }
 
 .nav a li {
-    padding-top: 20px;
+    padding-top: 25px;
     display: table-cell;
     height: 100%;
     color: #cc0099;
     font-family: 'Montserrat';
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .nav a li:hover {
@@ -135,4 +135,9 @@ body {
 .details {
     color: white;
     font-size: 25px;
+}
+
+.loginLink {
+    border: 1px solid  #cc0099;
+    padding: 6px 14px;
 }
