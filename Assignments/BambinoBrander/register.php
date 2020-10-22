@@ -27,8 +27,7 @@
 
         </form>
         <br>
-        <label for="register">Don't have an account? </label>
-        <a href="register.php" name="register" class="registerLink">Resgister here</a>
+        
     </div>
     </center>
 </body>
