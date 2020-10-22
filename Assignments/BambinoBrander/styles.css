@@ -65,7 +65,7 @@ body {
     padding-right: 0;
 }
 
-.nav a li {
+/* .nav a li {
     margin-top: 25px;
     display: table-cell;
     height: 100%;
@@ -78,7 +78,7 @@ body {
 
 .nav a li:hover {
     color: #7dcbf9;
-}
+} */
 
 
 .blueText {
