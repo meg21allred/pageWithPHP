@@ -10,7 +10,7 @@
     $num = 0;
     $dPassword = "";
 
-    $checkUser = $db->prepare("SELECT * FROM user_login Where userName = :userName && userPassword = :userPassword");
+    $checkUser = $db->prepare("SELECT * FROM user_login Where userName = :userName and userPassword = :userPassword");
     $checkUser->execute(array(':userName' => $user, ':userPassword' => $password));
 
     while ($row = $checkUser->fetch(PDO::FETCH_ASSOC)) {
