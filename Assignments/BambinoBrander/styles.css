@@ -66,22 +66,12 @@ body {
 }
 
 .nav a li {
-    margin-top: 32px;
+    padding-top: 32px;
     display: table-cell;
     height: 100%;
     color: #cc0099;
     font-family: 'Montserrat';
     font-size: 20px;
-    
-}
-
-.loginLink {
-    color: #7dcbf9;
-    
-}
-
-.loginLink:hover {
-    color: #cc0099;
     
 }
 
