@@ -1,5 +1,10 @@
 <?php 
     require_once("config.php"); 
 
-   echo "registration successful!";
+    $user = $_POST['userName'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+
+   echo "registration successful!" . $user . $email . $password;
 ?>
