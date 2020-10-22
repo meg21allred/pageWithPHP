@@ -15,13 +15,13 @@
 
     while ($row = $checkEmail->fetch(PDO::FETCH_ASSOC)) {
         
-        $dPassword = $row['userPassword'];
+        $dPassword = $row["userPassword"];
         if ($password == $dPassword){
             $num++;
         }
         
     }
-echo $dPassword . " " . $password;
+echo "dpassword: " . $dPassword . " password: " . $password;
 
     if($num == 1) {
         $_SESSION['userName'] = $user;
