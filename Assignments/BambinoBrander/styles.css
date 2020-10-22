@@ -77,6 +77,12 @@ body {
 
 .loginLink {
     border: 1px solid #cc0099;
+    padding: 6px 14px;
+    margin-top: 32px;
+}
+
+.loginLink:hover {
+    border: 1px solid #7dcbf9;
 }
 
 .nav a li:hover {
