@@ -6,15 +6,19 @@
     require_once("config.php"); 
 
     $user = $_POST['userName'];
-    $email = $_POST['email'];
     $password = $_POST['userPassword'];
     $num = 0;
 
-    $checkEmail = $db->prepare("SELECT userName FROM user_login Where userName = :userName");
+    $checkEmail = $db->prepare("SELECT userName, userPassword FROM user_login Where userName = :userName");
     $checkEmail->execute(array(':userName' => $user));
 
     while ($row = $checkEmail->fetch(PDO::FETCH_ASSOC)) {
-        $num++;
+        
+        $dPassword = $row['userPassword'];
+        if ($password == $dPassword){
+            $num++;
+        }
+        
     }
 
     if($num == 1) {
