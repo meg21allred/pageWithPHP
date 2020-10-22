@@ -15,7 +15,12 @@
                 <div>
                     <ul class="nav">
                     <a href="index.php"><li>HOME</li></a>
-                    <a href="login.php"><li>LOG IN</li></a>
+                    <?php if (isset($_SESSION['userName'])) {
+                        echo "<a href='logout.php'><li>LOG OUT</li></a>";
+                    } else {
+                        echo "<a href='login.php'><li>LOG IN</li></a>";
+                    }
+                    ?>
                     </ul>
             
                 </div>

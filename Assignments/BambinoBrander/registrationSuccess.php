@@ -1,4 +1,6 @@
 <?php 
+    session_start();
+
     require_once("config.php"); 
 
     $user = $_POST['userName'];
@@ -13,16 +15,17 @@
         $num++;
     }
 
-    echo $num;
-
     if($num > 0) {
-        echo "user name already taken";
+        echo "user email already taken";
     } else {
         $reg = $db->prepare("INSERT INTO user_login(userName, userPassword, email) 
                             VALUES (:userName, :userPassword, :email)");
         $reg->execute(array(':userName' => $user, 'userPassword' => $password, ':email' => $email));
 
         echo "registration successful!" . $user . " " . $email . " " . $password;
+        
+        $_SESSION['userName'] = $user;
+        header('location:index.php');
     }
   
 ?>
