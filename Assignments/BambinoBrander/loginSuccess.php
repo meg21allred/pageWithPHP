@@ -14,16 +14,17 @@
     $checkUser->execute(array(':userName' => $user));
 
     while ($row = $checkUser->fetch(PDO::FETCH_ASSOC)) {
-        
-        $dPassword = $row["userPassword"];
-        $dUser = $row["userName"];
-        echo "userName: " . $dUser . " UserPassword: " . $dPassword;
-        if ($password == $dPassword){
-            $num++;
-        }
+      $num++;  
+
+        // $dPassword = $row["userPassword"];
+        // $dUser = $row["userName"];
+        // echo "userName: " . $dUser . " UserPassword: " . $dPassword;
+        // if ($password == $dPassword){
+        //     $num++;
+        // }
         
     }
-echo "dpassword: " . $dPassword . " password: " . $password;
+//echo "dpassword: " . $dPassword . " password: " . $password;
 
     if($num == 1) {
         $_SESSION['userName'] = $user;
