@@ -10,12 +10,14 @@
     $num = 0;
     $dPassword = "";
 
-    $checkEmail = $db->prepare("SELECT * FROM user_login Where userName = :userName");
-    $checkEmail->execute(array(':userName' => $user));
+    $checkUser = $db->prepare("SELECT * FROM user_login Where userName = :userName");
+    $checkUser->execute(array(':userName' => $user));
 
-    while ($row = $checkEmail->fetch(PDO::FETCH_ASSOC)) {
+    while ($row = $checkUser->fetch(PDO::FETCH_ASSOC)) {
         
         $dPassword = $row["userPassword"];
+        $dUser = $row["userName"];
+        echo "userName: " . $dUser . " UserPassword: " . $dPassword;
         if ($password == $dPassword){
             $num++;
         }
