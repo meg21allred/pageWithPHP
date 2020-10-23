@@ -35,7 +35,7 @@ session_start();
     <br>
     <br>
     <br>
-    <h1 class="blueText">Welcome!</h1>
+    <h1 class="blueText">Welcome<?php echo " " . $_SESSION['username'] ?>!</h1>
     <img src="babyFaceIcon.svg" alt="baby face" width="300px">
     <h2 class="blueText">Choose a Gender</h2>
     
