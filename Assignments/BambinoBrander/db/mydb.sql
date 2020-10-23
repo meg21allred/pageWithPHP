@@ -25,13 +25,10 @@ CREATE TABLE boy_names (
 );
 
 -- Table of list of names picked by users
-CREATE TABLE pickedNames (
+CREATE TABLE picked_names (
     id SERIAL PRIMARY KEY,
-    picked_girl_name VARCHAR(255),
-    picked_boy_name VARCHAR(255),
+    picked_name VARCHAR(255),
     login_id INT,
-    FOREIGN KEY (picked_girl_name) REFERENCES girl_names(girl_name),
-    FOREIGN KEY (picked_boy_name) REFERENCES boy_names(boy_name),
     FOREIGN KEY (login_id) REFERENCES user_login(id)
 );
 
@@ -60,8 +57,6 @@ INSERT INTO boy_names (boy_name, def, origin) VALUES ('Landon', 'From the Long H
 INSERT INTO boy_names (boy_name, def, origin) VALUES ('Miles', 'Soldier', 'Latin');
 INSERT INTO boy_names (boy_name, def, origin) VALUES ('Theo', 'Divine Gift', 'Greek');
 
-
-
-
-
+-- test inserting into picked names table
+INSERT INTO picked_names (picked_name, login_id) VALUES ("Abby", 1);
 
