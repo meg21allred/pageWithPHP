@@ -1,7 +1,6 @@
 <?php
 session_start();
 $userName = $_SESSION['userName'];
-echo $userName;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +36,7 @@ echo $userName;
     <br>
     <br>
     <br>
-    <h1 class="blueText">Welcome<?php echo " " . $userName?>!</h1>
+    <h1 class="blueText">Welcome<?php if(isset($_SESSION['userName'])) {echo " " . $userName;}?>!</h1>
     <img src="babyFaceIcon.svg" alt="baby face" width="300px">
     <h2 class="blueText">Choose a Gender</h2>
     
