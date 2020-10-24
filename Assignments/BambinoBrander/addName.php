@@ -17,7 +17,7 @@
         $insert->execute(array(':picked_name' => $name, ':login_id' => $userId));
 
         echo "Name: " . $name . " " . "user id: " . $userId . "<br><br><br>";
-        //header('location:history.back()');
+        header('location:history.back()');
     } else {
         header('location:login.php');
     }
