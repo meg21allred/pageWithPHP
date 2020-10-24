@@ -32,9 +32,9 @@
     <br><br><br>
 
     <center>
-    <h1>List of Names</h1>
+    <h1 class="nameListTitle">List of Names</h1>
 
-    <ul class="namelist">
+    <ul >
     <?php
     
     if(isset($_SESSION['userName'])) {
@@ -42,7 +42,7 @@
         $list->execute(array(':login_id' => $userId));
        
         while ($row = $list->fetch(PDO::FETCH_ASSOC)) {
-        echo "<li>" . $row['picked_name'] . "</li>";
+        echo "<li class='namelist'>" . $row['picked_name'] . "</li>";
         }
     } else {
         header('location:login.php');
