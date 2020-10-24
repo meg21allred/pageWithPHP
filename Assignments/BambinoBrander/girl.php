@@ -19,7 +19,7 @@
             <div class="logo_container"><h1>Bambino<span>Brander</span></h1></div>
                 <div>
                     <ul class="nav">
-                    <a href="showNames.php">LIST</a>
+                    <a href="showNames.php"><li>LIST</li></a>
                     <a href="index.php"><li>HOME</li></a>
                     </ul>
             
