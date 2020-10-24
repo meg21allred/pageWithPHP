@@ -52,6 +52,8 @@
     }
 
     ?>
+
+    <button class="btn boy" onClick="location.href='deleteList.php">DELETE LIST</button>
     
     </ul>
 
