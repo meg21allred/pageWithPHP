@@ -16,7 +16,7 @@
 
         $checkName = $db->prepare("SELECT picked_name FROM picked_names WHERE picked_name = :picked_name");
         $checkName->execute(array(':picked_name' => $name));
-        while ($row = $getName->fetch(PDO::FETCH_ASSOC)) {
+        while ($row = $checkName->fetch(PDO::FETCH_ASSOC)) {
             $checkForName = $row['picked_name'];
         }
         echo "check for name: " . $checkForName . "<br>";
