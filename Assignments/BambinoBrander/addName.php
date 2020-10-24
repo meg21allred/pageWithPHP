@@ -29,7 +29,7 @@
             $insert->execute(array(':picked_name' => $name, ':login_id' => $userId));
         } 
         
-       //header('Location: ' . $_SERVER['HTTP_REFERER']);
+       header('Location: ' . $_SERVER['HTTP_REFERER']);
     } else {
         header('location:login.php');
     }
