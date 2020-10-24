@@ -1,7 +1,6 @@
 <?php 
     require_once("config.php"); 
     session_start();
-    echo $_SESSION['userName'];
 ?>
 
 
@@ -63,8 +62,7 @@
         ?>
         <br><br>
         <!-- maybe add an add to list button for names you like? -->
-        <input class="btn boy" type="submit" value="+ to list" onClick="location.href='addName.php?id=<?php echo $id;?>'">;
-      <!-- <input class="btn boy" type="submit" value="+ to list" onClick="location.href='login.php'">; -->
+        <input class="btn boy" type="button" value="add to list" onClick="location.href='addName.php?id=<?php echo $id;?>'">;
         <input class="btn boy" type="button" onClick="location.href='boyList.php?id=<?php if ($id < 11) { echo $id+1; } else {$id = 1; echo $id;} ?>'" value="next">
                 
 
