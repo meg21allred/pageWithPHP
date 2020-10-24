@@ -9,7 +9,7 @@
     
     echo "name id: " . $id;
     echo "<br>";
-    
+
     if (isset($_SESSION['userName'])) {
         $getName = $db->prepare("SELECT boy_name FROM boy_names WHERE id = :id");
         $getName->execute(array(':id' => $id));
@@ -17,8 +17,8 @@
             $name = $row['boy_name'];
         }
 
-        $checkName = $db->prepare("SELECT picked_name FROM picked_names WHERE picked_name = :picked_name");
-        $checkName->execute(array(':picked_name' => $name));
+        $checkName = $db->prepare("SELECT picked_name FROM picked_names WHERE picked_name = :picked_name AND login_id = :login_id");
+        $checkName->execute(array(':picked_name' => $name, 'login_id' => $userId));
         while ($row = $checkName->fetch(PDO::FETCH_ASSOC)) {
             $checkForName = $row['picked_name'];
         }
