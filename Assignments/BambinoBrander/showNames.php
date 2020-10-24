@@ -34,7 +34,10 @@
     <center>
     <h1 class="nameListTitle">List of Names</h1>
 
-    <ul >
+    <div class="listDiv">
+
+    
+    <ul>
     <?php
     
     if(isset($_SESSION['userName'])) {
@@ -51,6 +54,8 @@
     ?>
     
     </ul>
+
+    </div>
      </center>
     </body>
 </html>
