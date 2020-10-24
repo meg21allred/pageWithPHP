@@ -158,3 +158,13 @@ body {
     font-size: 30px;
     color: #f7a7e3;
 }
+
+.nameList {
+    color: #ffffff;
+    font-size: 50px;
+}
+
+.nameListTitle {
+    color: #cc0099;
+    font-size: 20px;
+}

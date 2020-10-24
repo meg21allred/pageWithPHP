@@ -29,7 +29,12 @@
         </div>
     </div>
 
-    <ol>
+    <br><br><br>
+
+    <center>
+    <h1>List of Names</h1>
+
+    <ul class="namelist">
     <?php
     
     if(isset($_SESSION['userName'])) {
@@ -42,13 +47,10 @@
     } else {
         header('location:login.php');
     }
-     
-         
-     
 
     ?>
     
-    </ol>
-
+    </ul>
+     </center>
     </body>
 </html>
