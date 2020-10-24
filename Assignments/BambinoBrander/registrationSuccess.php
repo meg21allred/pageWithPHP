@@ -26,6 +26,7 @@
         
         $_SESSION['userName'] = $user;
         $_SESSION['userId'] = $userId;
+        $_SESSION['nameNum'] = 0;
         header('location:index.php');
     }
   

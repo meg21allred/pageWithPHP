@@ -8,10 +8,10 @@
     $checkForName;
     
     if (isset($_SESSION['userName'])) {
-        $getName = $db->prepare("SELECT boy_name FROM boy_names WHERE id = :id");
+        $getName = $db->prepare("SELECT girl_name FROM girl_names WHERE id = :id");
         $getName->execute(array(':id' => $id));
         while ($row = $getName->fetch(PDO::FETCH_ASSOC)) {
-            $name = $row['boy_name'];
+            $name = $row['girl_name'];
         }
 
         $checkName = $db->prepare("SELECT picked_name FROM picked_names WHERE picked_name = :picked_name");

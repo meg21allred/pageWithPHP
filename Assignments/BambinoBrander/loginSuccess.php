@@ -22,6 +22,7 @@
     if($num == 1) {
         $_SESSION['userName'] = $user;
         $_SESSION['userId'] = $userId;
+        $_SESSION['nameNum'] = 0;
         echo "login successful";
         header('location:index.php');
     } else {

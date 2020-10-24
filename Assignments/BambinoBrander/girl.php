@@ -19,6 +19,7 @@
             <div class="logo_container"><h1>Bambino<span>Brander</span></h1></div>
                 <div>
                     <ul class="nav">
+                    <a href="showNames.php">LIST</a>
                     <a href="index.php"><li>HOME</li></a>
                     </ul>
             
@@ -68,6 +69,7 @@
     <br><br>
 
     <!-- maybe add an add to list button for names you like? -->
+    <input class="btn girl" type="button" value="add to list" onClick="location.href='addGirlName.php?id=<?php echo $id;?>'">;
     <input class="btn girl" type="button" onClick="location.href='girl.php?id=<?php if ($id < 10) { echo $id+1; } else {$id = 1; echo $id;} ?>'" value="next">
 
     </center>
