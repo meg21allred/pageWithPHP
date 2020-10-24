@@ -13,8 +13,8 @@
             $name = $row['boy_name'];
         }
 
-        // $insert = $db->prepare("INSERT INTO picked_names(picked_name, login_id) VAlUES (:picked_name, :login_id");
-        // $insert->execute(array(':picked_name' => $name, ':login_id' => $userId));
+        $insert = $db->prepare("INSERT INTO picked_names(picked_name, login_id) VAlUES (:picked_name, :login_id)");
+        $insert->execute(array(':picked_name' => $name, ':login_id' => $userId));
 
         echo "Name: " . $name . " " . "user id: " . $userId . "<br><br><br>";
         //header('location:history.back()');
