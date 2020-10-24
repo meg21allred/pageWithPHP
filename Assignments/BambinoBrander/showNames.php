@@ -45,7 +45,7 @@
         $list->execute(array(':login_id' => $userId));
        
         while ($row = $list->fetch(PDO::FETCH_ASSOC)) {
-        echo "<li class='namelist'>" . $row['picked_name'] . "</li>";
+        echo "<li class='nameList'>- " . $row['picked_name'] . "</li>";
         }
     } else {
         header('location:login.php');
