@@ -8,9 +8,10 @@
     $password = $_POST['userPassword'];
     $num = 0;
     $nameValidation = "/^[a-zA-Z0-9]*$/";
+    $passwordValidation ="/^(.{0,7}|[^a-z]*|[^\d]*)$/i";
 
 
-//Validate username
+    //Validate username
     if ($user == NULL) {
         header('location:register.php?enteredName=1');
         return;
@@ -26,6 +27,18 @@
     }elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)){
         header('location:register.php?enteredEmail=2');
         return;
+    }
+
+    //Validate password
+    if ($password == NULL) {
+        header('location:register.php?enteredPass=1');
+        return;
+    } elseif (strlen($password) < 6) {
+        header('location:register.php?enteredPass=2');
+        return;
+    } elseif (!preg_match($passwordValidation, $password)) {
+            header('location:register.php?enteredPass=3');
+            return;
     }
 
     $checkEmail = $db->prepare("SELECT email FROM user_login Where email = :email");

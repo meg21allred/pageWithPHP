@@ -1,6 +1,7 @@
 <?php
     $nameValidation = $_GET['enteredName'];
     $emailVal = $_GET['enteredEmail'];
+    $passVal = $_GET['enteredPass']
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,6 +54,16 @@
         ?>
             <label for="email" class="labels">Email: </label>
             <input type="text" name="email"><br><br>
+            <?php if ($passVal == 1){
+                 echo "<p>Please enter password.</p>";
+                 } elseif ($passVal == 2) {
+                     echo "<p>Password must be at least 8 Characters long.</p>";
+                     } elseif ($passVal == 3) {
+                        echo "<p>Password must containg at least 1 number.</p>";
+                     } else {
+                        echo "";
+                     }
+        ?>
             <label for="userPassword" class="labels">Password: </label>
             <input type="password" name="userPassword"><br><br>
             <label for="comfirmPassword" class="labels">Comfirm password: </label>
