@@ -2,6 +2,7 @@
     $nameValidation = $_GET['enteredName'];
     $emailVal = $_GET['enteredEmail'];
     $passVal = $_GET['enteredPass'];
+    $comPassVal = $_GET['enteredComPass'];
     echo $passVal;
 ?>
 <!DOCTYPE html>
@@ -67,6 +68,14 @@
         ?>
             <label for="userPassword" class="labels">Password: </label>
             <input type="password" name="userPassword"><br><br>
+            <?php if ($comPassVal == 1){
+                 echo "<p>Please confirm password.</p>";
+                 } elseif ($comPassVal == 2) {
+                     echo "<p>Passwords do not match. Please try again.</p>";
+                     } else {
+                         echo "";
+                     }
+        ?>
             <label for="comfirmPassword" class="labels">Comfirm password: </label>
             <input type="password" name="comfirmPassword"><br><br>
             <button type="submit" class="btn boy">Submit</button>
