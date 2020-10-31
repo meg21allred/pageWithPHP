@@ -3,7 +3,7 @@
     $emailVal = $_GET['enteredEmail'];
     $passVal = $_GET['enteredPass'];
     $comPassVal = $_GET['enteredComPass'];
-    echo $passVal;
+    echo $comPassVal;
 ?>
 <!DOCTYPE html>
 <html lang="en">
