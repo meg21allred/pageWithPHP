@@ -8,7 +8,7 @@
     $password = $_POST['userPassword'];
     $num = 0;
     $nameValidation = "/^[a-zA-Z0-9]*$/";
-    $passwordValidation ="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm";
+    $passwordValidation = "/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/";
 
 
     //Validate username
