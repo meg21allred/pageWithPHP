@@ -11,7 +11,7 @@
     $num;
 
     echo $compUser . " " . $compEmail; 
-    $checkCompUser = $db->prepare("SELECT * FROM user_login Where userName = :userName and userEmail = :userEmail");
+    $checkCompUser = $db->prepare("SELECT * FROM user_login WHERE username = :userName AND email = :userEmail");
     $checkCompUser->execute(array(':userName' => $compUser, ':userEmail' => $compEmail));
 
     while ($row = $checkCompUser->fetch(PDO::FETCH_ASSOC)) {
