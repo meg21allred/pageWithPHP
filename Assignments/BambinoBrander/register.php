@@ -1,7 +1,8 @@
 <?php
     $nameValidation = $_GET['enteredName'];
     $emailVal = $_GET['enteredEmail'];
-    $passVal = $_GET['enteredPass']
+    $passVal = $_GET['enteredPass'];
+    echo $passVal;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +60,7 @@
                  } elseif ($passVal == 2) {
                      echo "<p>Password must be at least 8 Characters long.</p>";
                      } elseif ($passVal == 3) {
-                        echo "<p>Password must containg at least 1 number.</p>";
+                        echo "<p>Password must contain at least 1 number.</p>";
                      } else {
                         echo "";
                      }
