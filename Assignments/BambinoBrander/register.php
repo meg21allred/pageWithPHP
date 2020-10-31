@@ -30,7 +30,7 @@
     <h2 class="small_title">Enter the following:</h2>
     <div>
         <form class="userForm" action="registrationSuccess.php" method="post">
-        <?php if($nameValidation == 0) {echo "<p>Please Enter a user name.</p>";} ?>
+        <?php if($nameValidation == 1) {echo "<p>Please Enter a user name.</p>";} elseif ($nameValidation = 2) {echo "<p>Name must user letters and/or numbers only.</p>";} ?>
             <label for="userName" class="labels">User name: </label>
             <input type="text" name="userName"><br><br>
             <label for="email" class="labels">Email: </label>

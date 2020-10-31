@@ -7,9 +7,14 @@
     $email = $_POST['email'];
     $password = $_POST['userPassword'];
     $num = 0;
+    $nameValidation = "/^[a-zA-Z0-9]*$/";
+
 echo "user names is: " . $user;
     if ($user == NULL) {
-        header('location:register.php?enteredName=0');
+        header('location:register.php?enteredName=1');
+        return;
+    } elseif (!preg_match($nameValidation, $user)) {
+        header('location:register.php?enteredName=2');
         return;
     }
 
