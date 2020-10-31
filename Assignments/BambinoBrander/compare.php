@@ -8,16 +8,18 @@
     $compEmail = $_POST['userEmail'];
     $compData = array();
     $compUserId;
+    $num;
 
     echo $compUser . " " . $compEmail; 
-    // $checkCompUser = $db->prepare("SELECT * FROM user_login Where userName = :userName and userEmail = :userEmail");
-    // $checkCompUser->execute(array(':userName' => $compUser, ':userEmail' => $compEmail));
+    $checkCompUser = $db->prepare("SELECT * FROM user_login Where userName = :userName and userEmail = :userEmail");
+    $checkCompUser->execute(array(':userName' => $compUser, ':userEmail' => $compEmail));
 
-    // while ($row = $checkCompUser->fetch(PDO::FETCH_ASSOC)) {
-    //      $compUserId = $row['id']; 
-    //      $num++;  
-    // }
+    while ($row = $checkCompUser->fetch(PDO::FETCH_ASSOC)) {
+         $compUserId = $row['id']; 
+         $num++;  
+    }
 
+    echo $num;
     // if($num == 1) {
     //     echo "user found";
 
