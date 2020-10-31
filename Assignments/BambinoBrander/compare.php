@@ -35,8 +35,8 @@
         echo "</ul><br><br>";
 
         echo "<ul>";
-        foreach ($compData[0] as $data) {
-            echo "<li class='nameList'>- " . $data . "</li>";;
+        foreach ($compData as $data) {
+            echo "<li class='nameList'>- " . $data['picked_name'] . "</li>";;
         }
         echo "</ul?";
       
