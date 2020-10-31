@@ -24,10 +24,7 @@
 
         echo "registration successful!" . $user . " " . $email . " " . $password;
         
-        $_SESSION['userName'] = $user;
-        $_SESSION['userId'] = $userId;
-        $_SESSION['nameNum'] = 0;
-        header('location:index.php');
+       header('location:login.php');
     }
   
 ?>
