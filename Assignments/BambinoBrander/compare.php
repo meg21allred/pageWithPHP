@@ -4,10 +4,10 @@
 
    echo " This is compare.php!";
 
-    // $compUser = $_POST['userName'];
-    // $compEmail = $_POST['userEmail'];
-    // $compData = array();
-    // $compUserId;
+    $compUser = $_POST['userName'];
+    $compEmail = $_POST['userEmail'];
+    $compData = array();
+    $compUserId;
 
     // $checkCompUser = $db->prepare("SELECT * FROM user_login Where userName = :userName and userEmail = :userEmail");
     // $checkCompUser->execute(array(':userName' => $compUser, ':userEmail' => $compEmail));
