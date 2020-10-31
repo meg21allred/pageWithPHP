@@ -8,6 +8,10 @@
     $password = $_POST['userPassword'];
     $num = 0;
 
+    if ($user == NULL) {
+        header('location:resgister.php?enteredName=0');
+    }
+
     $checkEmail = $db->prepare("SELECT email FROM user_login Where email = :email");
     $checkEmail->execute(array(':email' => $email));
 
