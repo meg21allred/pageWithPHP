@@ -20,23 +20,23 @@
     }
 
     echo $num;
-    // if($num == 1) {
-    //     echo "user found";
+    if($num == 1) {
+        echo "user found";
 
-    //     $getCompUserList = $db->prepare("SELECT picked_name FROM user_login Where login_id = :compUserId");
-    //     $getCompUserList->execute(array(':compUserId' => $compUserId));
+        $getCompUserList = $db->prepare("SELECT picked_name FROM user_login Where login_id = :compUserId");
+        $getCompUserList->execute(array(':compUserId' => $compUserId));
 
-    //     echo "<ul>";
-    //     while ($row = $getCompUserList->fetch(PDO::FETCH_ASSOC)) {
-    //         echo "<li class='nameList'>- " . $row['picked_name'] . "</li>";
-    //         }
-    //     echo "</ul>";
+        echo "<ul>";
+        while ($row = $getCompUserList->fetch(PDO::FETCH_ASSOC)) {
+            echo "<li class='nameList'>- " . $row['picked_name'] . "</li>";
+            }
+        echo "</ul>";
       
-    // } else {
-    //     echo "user not found, please try again.";
-    //     echo '<input class="btn boy" type="button" value="try again" onClick="location.href=enterCompareLogin.php">';
+    } else {
+        echo "user not found, please try again.";
+        echo '<input class="btn boy" type="button" value="try again" onClick="location.href=enterCompareLogin.php">';
 
-    // }
+    }
 ?>
 
 
