@@ -6,7 +6,7 @@
     $user = $_POST['userName'];
     $email = $_POST['email'];
     $password = $_POST['userPassword'];
-    $comfirmPassword = $POST['comfirmPassword'];
+    $comfirmPassword = $_POST['comfirmPassword'];
     $num = 0;
     $nameValidation = "/^[a-zA-Z0-9]*$/";
     $passwordValidation = "/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/";
