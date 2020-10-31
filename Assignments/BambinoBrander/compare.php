@@ -7,7 +7,9 @@
     $compUser = $_POST['userName'];
     $compEmail = $_POST['userEmail'];
     $compData = array();
+    $userId = $_SESSION['userId'];
     $compUserId;
+    $userData = array();
     $num;
 
     echo $compUser . " " . $compEmail; 
@@ -40,6 +42,14 @@
         }
         echo "</ul?";
       
+        $getUserList = $db->prepare("SELECT picked_name FROM picked_names WHERE login_id = :compUserId");
+        $getUserList->execute(array(':compUserId' => $userId));
+
+        while ($row = $getUserList->fetch(PDO::FETCH_ASSOC)) {
+            echo "<li class='nameList'>- " . $row['picked_name'] . "</li>";
+            $userData[] = $row;
+            }
+        echo "</ul><br><br>";
     } else {
         echo "user not found, please try again.";
         echo '<input class="btn boy" type="button" value="try again" onClick="location.href=enterCompareLogin.php">';
