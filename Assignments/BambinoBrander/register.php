@@ -45,8 +45,10 @@
                  echo "<p>Please Enter an email address.</p>";
                  } elseif ($emailVal == 2) {
                      echo "<p>Please Enter a correct email Address.</p>";
+                     } elseif ($emailVal == 3) {
+                        echo "<p>Email address is already registered.</p>";
                      } else {
-                         echo "";
+                        echo "";
                      }
         ?>
             <label for="email" class="labels">Email: </label>

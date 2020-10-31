@@ -34,9 +34,9 @@
     while ($row = $checkEmail->fetch(PDO::FETCH_ASSOC)) {
         $num++;
     }
-
     if($num > 0) {
-        echo "user email already taken";
+        header('location:register.php?enteredEmail=3');
+        return;
     } else {
         $reg = $db->prepare("INSERT INTO user_login(userName, userPassword, email) 
                             VALUES (:userName, :userPassword, :email)");
@@ -44,7 +44,7 @@
 
         echo "registration successful!" . $user . " " . $email . " " . $password;
         
-       //header('location:login.php');
+       header('location:login.php');
     }
   
 ?>
