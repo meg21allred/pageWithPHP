@@ -10,6 +10,7 @@
 
     if ($user == NULL) {
         header('location:resgister.php?enteredName=0');
+        return;
     }
 
     $checkEmail = $db->prepare("SELECT email FROM user_login Where email = :email");

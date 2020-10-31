@@ -1,3 +1,6 @@
+<?php
+    $nameValidation = $_GET['enteredName'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,6 +30,7 @@
     <h2 class="small_title">Enter the following:</h2>
     <div>
         <form class="userForm" action="registrationSuccess.php" method="post">
+        <?php if($nameValidation == 0) echo "<p>Please Enter a name.</p>" ?>
             <label for="userName" class="labels">User name: </label>
             <input type="text" name="userName"><br><br>
             <label for="email" class="labels">Email: </label>

@@ -1,6 +1,4 @@
-<?php
-    $nameValidation = $_GET['enteredName'];
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +27,6 @@
         <h1 class="title">Log in</h1><br>
         <div class='userForm'>
             <form action="loginSuccess.php" method="post">
-            <?php if($nameValidation == 0) echo "<p>Please Enter a name.</p>" ?>
                 <label for="userName" class="labels">Enter user name: </label>
                 <input type="text" name="userName" ><br><br>
                 <label for="userPassword" class="labels">Enter password: </label>
