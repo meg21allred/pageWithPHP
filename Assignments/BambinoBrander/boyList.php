@@ -20,6 +20,7 @@
                 <div>
                     <ul class="nav">
                     <a href="showNames.php"><li>LIST</li></a>
+                    <a href="enterCompareLogin.php"><li>COMPARE LISTS</li></a>
                     <a href="index.php"><li>HOME</li></a>
                     </ul>
             
