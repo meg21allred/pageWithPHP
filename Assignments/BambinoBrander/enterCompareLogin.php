@@ -35,17 +35,18 @@
     </div>
     <br><br><br><br><br>
     <center>
-    <form action="compare.php" method="post">
+    
     Enter user Name and email of who you would like to compare:
     <br>
+    <form action="compare.php" method="post">
     <label for="userName" class="labels">Enter user name: </label>
                 <input type="text" name="userName" ><br><br>
                 <label for="userEmail" class="labels">Enter email address: </label>
                 <input type="text" name="userEmail"><br><br>
                 <button type="submit" class="btn boy">Submit</button>
-    
-    </center>
-    
     </form>
+
+
+    </center>
     </body>
 </html>
