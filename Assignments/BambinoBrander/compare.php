@@ -30,8 +30,15 @@
         echo "<ul>";
         while ($row = $getCompUserList->fetch(PDO::FETCH_ASSOC)) {
             echo "<li class='nameList'>- " . $row['picked_name'] . "</li>";
+            $compData[] = $row;
             }
-        echo "</ul>";
+        echo "</ul><br><br>";
+
+        echo "<ul>";
+        foreach ($compData[0] as $data) {
+            echo "<li class='nameList'>- " . $data . "</li>";;
+        }
+        echo "</ul?";
       
     } else {
         echo "user not found, please try again.";
