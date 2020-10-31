@@ -20,10 +20,11 @@
     }
 
     echo $num;
+    echo "<br> " . $compUserId;
     if($num == 1) {
         echo "user found";
 
-        $getCompUserList = $db->prepare("SELECT picked_name FROM user_login Where login_id = :compUserId");
+        $getCompUserList = $db->prepare("SELECT picked_name FROM picked_names WHERE login_id = :compUserId");
         $getCompUserList->execute(array(':compUserId' => $compUserId));
 
         echo "<ul>";
