@@ -7,7 +7,7 @@
     $email = $_POST['email'];
     $password = $_POST['userPassword'];
     $num = 0;
-
+echo "user names is: " . $user;
     if ($user == NULL) {
         header('location:resgister.php?enteredName=0');
         return;
@@ -29,7 +29,7 @@
 
         echo "registration successful!" . $user . " " . $email . " " . $password;
         
-       header('location:login.php');
+       //header('location:login.php');
     }
   
 ?>
