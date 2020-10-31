@@ -9,6 +9,7 @@
     $compData = array();
     $compUserId;
 
+    echo $compUser . " " . $compEmail; 
     // $checkCompUser = $db->prepare("SELECT * FROM user_login Where userName = :userName and userEmail = :userEmail");
     // $checkCompUser->execute(array(':userName' => $compUser, ':userEmail' => $compEmail));
 
