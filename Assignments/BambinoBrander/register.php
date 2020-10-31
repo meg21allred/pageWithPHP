@@ -1,5 +1,6 @@
 <?php
     $nameValidation = $_GET['enteredName'];
+    echo $nameValidation;
 ?>
 <!DOCTYPE html>
 <html lang="en">
