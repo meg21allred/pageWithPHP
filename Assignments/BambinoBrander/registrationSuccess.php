@@ -8,7 +8,7 @@
     $password = $_POST['userPassword'];
     $num = 0;
     $nameValidation = "/^[a-zA-Z0-9]*$/";
-    $passwordValidation ="/^(.{0,7}|[^a-z]*|[^\d]*)$/i";
+    $passwordValidation ="/^(([A-Za-z]+[^0-9]*)([0-9]+[^\W]*)([\W]+[\W0-9A-Za-z]*))|(([A-Za-z]+[^\W]*)([\W]+[^0-9]*)([0-9]+[\W0-9A-Za-z]*))|(([\W]+[^A-Za-z]*)([A-Za-z]+[^0-9]*)([0-9]+[\W0-9A-Za-z]*))|(([\W]+[^0-9]*)([0-9]+[^A-Za-z]*)([A-Za-z]+[\W0-9A-Za-z]*))|(([0-9]+[^A-Za-z]*)([A-Za-z]+[^\W]*)([\W]+[\W0-9A-Za-z]*))|(([0-9]+[^\W]*)([\W]+[^A-Za-z]*)([A-Za-z]+[\W0-9A-Za-z]*))$/g";
 
 
     //Validate username
@@ -33,12 +33,12 @@
     if ($password == NULL) {
         header('location:register.php?enteredPass=1');
         return;
-    } elseif (strlen($password) < 6) {
+    } elseif (strlen($password) < 7) {
         header('location:register.php?enteredPass=2');
         return;
     } elseif (!preg_match($passwordValidation, $password)) {
-            header('location:register.php?enteredPass=3');
-            return;
+        header('location:register.php?enteredPass=3');
+        return;
     }
 
     $checkEmail = $db->prepare("SELECT email FROM user_login Where email = :email");

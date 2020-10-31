@@ -60,7 +60,7 @@
                  } elseif ($passVal == 2) {
                      echo "<p>Password must be at least 8 Characters long.</p>";
                      } elseif ($passVal == 3) {
-                        echo "<p>Password must contain at least 1 number.</p>";
+                        echo "<p>Password must contain one special character, one character and one number in any order.</p>";
                      } else {
                         echo "";
                      }
