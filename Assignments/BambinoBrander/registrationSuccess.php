@@ -9,7 +9,7 @@
     $num = 0;
 echo "user names is: " . $user;
     if ($user == NULL) {
-        header('location:resgister.php?enteredName=0');
+        header('location:register.php?enteredName=0');
         return;
     }
 
