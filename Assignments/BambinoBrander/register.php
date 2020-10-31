@@ -1,7 +1,6 @@
 <?php
-
     $nameValidation = $_GET['enteredName'];
-    echo $nameValidation;
+    $emailVal = $_GET['enteredEmail'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,6 +41,14 @@
         ?>
             <label for="userName" class="labels">User name: </label>
             <input type="text" name="userName"><br><br>
+            <?php if ($emailVal == 1){
+                 echo "<p>Please Enter an email address.</p>";
+                 } elseif ($emailVal == 2) {
+                     echo "<p>Please Enter a correct email Address.</p>";
+                     } else {
+                         echo "";
+                     }
+        ?>
             <label for="email" class="labels">Email: </label>
             <input type="text" name="email"><br><br>
             <label for="userPassword" class="labels">Password: </label>

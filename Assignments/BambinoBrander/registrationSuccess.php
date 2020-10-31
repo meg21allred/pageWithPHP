@@ -9,12 +9,22 @@
     $num = 0;
     $nameValidation = "/^[a-zA-Z0-9]*$/";
 
-echo "user names is: " . $user;
+
+//Validate username
     if ($user == NULL) {
         header('location:register.php?enteredName=1');
         return;
     } elseif (!preg_match($nameValidation, $user)) {
         header('location:register.php?enteredName=2');
+        return;
+    }
+
+    //Validate user email
+    if ($email == NULL) {
+        header('location:register.php?enteredEmail=1');
+        return;
+    }elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)){
+        header('location:register.php?enteredEmail=2');
         return;
     }
 
