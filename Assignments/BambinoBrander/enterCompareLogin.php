@@ -38,13 +38,16 @@
     
     <h1 class="blueText">Enter user Name and email of who you would like to compare:</h1>
     <br>
+    <div class='userForm'>
     <form action="compare.php" method="post">
-    <label for="userName" class="labels">Enter user name: </label>
-                <input type="text" name="userName" ><br><br>
-                <label for="userEmail" class="labels">Enter email address: </label>
-                <input type="text" name="userEmail"><br><br>
-                <button type="submit" class="btn boy">Submit</button>
+        <label for="userName" class="labels">Enter user name: </label>
+        <input type="text" name="userName" ><br><br>
+        <label for="userEmail" class="labels">Enter email address: </label>
+        <input type="text" name="userEmail"><br><br>
+        <button type="submit" class="btn boy">Submit</button>
     </form>
+    </div>
+    
 
 
     </center>
