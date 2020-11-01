@@ -45,11 +45,21 @@
         $getUserList = $db->prepare("SELECT picked_name FROM picked_names WHERE login_id = :compUserId");
         $getUserList->execute(array(':compUserId' => $userId));
 
+        echo "<ul>";
         while ($row = $getUserList->fetch(PDO::FETCH_ASSOC)) {
             echo "<li class='nameList'>- " . $row['picked_name'] . "</li>";
             $userData[] = $row;
             }
         echo "</ul><br><br>";
+
+        $matchedNames = array_intersect($compData, $userData);
+      
+        echo "<ul>";
+        foreach ($matchedNames as $matches) {
+            echo "<li class='nameList'>- " . $matches['picked_name'] . "</li>";;
+        }
+        echo "</ul?";
+
     } else {
         echo "user not found, please try again.";
         echo '<input class="btn boy" type="button" value="try again" onClick="location.href=enterCompareLogin.php">';
