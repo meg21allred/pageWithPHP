@@ -38,7 +38,7 @@
 
         echo "Compare User List: <ul>";
         foreach ($compData as $data) {
-            echo "<li class='nameList'>- " . $data['picked_name'] . "</li>";;
+            echo "<li class='nameList'>- " . $data . "</li>";;
         }
         echo "</ul?><br><br>";
       
@@ -57,7 +57,7 @@
       
         echo "Matches: <ul>";
         foreach ($matchedNames as $matches) {
-            echo "<li class='nameList'>- " . $matches['picked_name'] . "</li>";;
+            echo "<li class='nameList'>- " . $matches . "</li>";;
         }
         echo "</ul?><br><br>";
 
