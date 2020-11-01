@@ -3,10 +3,10 @@
 
     require_once("config.php"); 
 
-    $user = $_POST['userName'];
-    $email = $_POST['email'];
-    $password = $_POST['userPassword'];
-    $comfirmPassword = $_POST['comfirmPassword'];
+    $user = htmlspecialchars($_POST['userName']);
+    $email = htmlspecialchars($_POST['email']);
+    $password = htmlspecialchars($_POST['userPassword']);
+    $comfirmPassword = htmlspecialchars($_POST['comfirmPassword']);
     $num = 0;
     $nameValidation = "/^[a-zA-Z0-9]*$/";
     $passwordValidation = "/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/";
