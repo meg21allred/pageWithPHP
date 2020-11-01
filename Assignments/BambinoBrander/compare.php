@@ -76,11 +76,11 @@
        
 
     } elseif ($compUser == NULL ) {
-        echo "<h1 class='title'>Please Enter User name and email of list to compare</h1>";
+        echo "<h1 class='compare'>Please Enter User name and email of list to compare</h1>";
         echo '<input class="btn boy" type="button" value="Try again" onClick="location.href=' . "'enterCompareLogin.php'" . '">';
 
     } else {
-        echo "<h1 class='title'>user not found, please try again.</h1>";
+        echo "<h1 class='compare'>user not found, please try again.</h1>";
         echo '<input class="btn boy" type="button" value="Try again" onClick="location.href=' . "'enterCompareLogin.php'" . '">';
 
     }
