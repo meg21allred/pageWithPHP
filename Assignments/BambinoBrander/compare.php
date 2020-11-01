@@ -36,16 +36,16 @@
             }
         echo "</ul><br><br>";
 
-        echo "<ul>";
+        echo "Compare User List: <ul>";
         foreach ($compData as $data) {
             echo "<li class='nameList'>- " . $data['picked_name'] . "</li>";;
         }
-        echo "</ul?";
+        echo "</ul?><br><br>";
       
         $getUserList = $db->prepare("SELECT picked_name FROM picked_names WHERE login_id = :compUserId");
         $getUserList->execute(array(':compUserId' => $userId));
 
-        echo "<ul>";
+        echo "<User List: ul>";
         while ($row = $getUserList->fetch(PDO::FETCH_ASSOC)) {
             echo "<li class='nameList'>- " . $row['picked_name'] . "</li>";
             $userData[] = $row;
@@ -54,7 +54,7 @@
 
         $matchedNames = array_intersect($compData, $userData);
       
-        echo "<ul>";
+        echo "Matches: <ul>";
         foreach ($matchedNames as $matches) {
             echo "<li class='nameList'>- " . $matches['picked_name'] . "</li>";;
         }
