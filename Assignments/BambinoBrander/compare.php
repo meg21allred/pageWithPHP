@@ -45,7 +45,7 @@
         $getUserList = $db->prepare("SELECT picked_name FROM picked_names WHERE login_id = :compUserId");
         $getUserList->execute(array(':compUserId' => $userId));
 
-        echo "<User List: ul>";
+        echo "User List: <ul>";
         while ($row = $getUserList->fetch(PDO::FETCH_ASSOC)) {
             echo "<li class='nameList'>- " . $row['picked_name'] . "</li>";
             $userData[] = $row;
@@ -58,7 +58,9 @@
         foreach ($matchedNames as $matches) {
             echo "<li class='nameList'>- " . $matches['picked_name'] . "</li>";;
         }
-        echo "</ul?";
+        echo "</ul?><br><br>";
+
+        print_r($matchedNames);
 
     } else {
         echo "user not found, please try again.";
