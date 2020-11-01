@@ -22,7 +22,7 @@
     </div>
     <br><br><br><br><br>
     <center>
-        <h1 class="blueText">Matched Names</h1>
+        
         <br><br>
 
 
@@ -48,6 +48,8 @@
     }
 
     if($num == 1) {
+        echo "<h1 class='blueText'>Matched Names</h1>";
+
         //user exists, save comp user names into array
         $getCompUserList = $db->prepare("SELECT picked_name FROM picked_names WHERE login_id = :compUserId");
         $getCompUserList->execute(array(':compUserId' => $compUserId));

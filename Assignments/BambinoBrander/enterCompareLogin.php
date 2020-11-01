@@ -36,7 +36,7 @@
     <br><br><br><br><br>
     <center>
     
-    <h1 class="blueText">Enter user Name and email of who you would like to compare:</h1>
+    <h1 class="title">Enter user Name and email of who you would like to compare:</h1>
     <br>
     <div class='userForm'>
     <form action="compare.php" method="post">
