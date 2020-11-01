@@ -83,6 +83,7 @@ body {
 
 .blueText {
     color: #7dcbf9;
+    font-size: 50px;
 }
 
 .pinkText {
@@ -176,4 +177,9 @@ body {
 
 form p {
     color: red;
+}
+
+.labels {
+    color: #f7a7e3;
+    font-size: 20px;
 }
