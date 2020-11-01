@@ -32,7 +32,7 @@
         echo "<ul>";
         while ($row = $getCompUserList->fetch(PDO::FETCH_ASSOC)) {
             echo "<li class='nameList'>- " . $row['picked_name'] . "</li>";
-            $compData[] = $row;
+            $compData[] = $row['picked_name'];
             }
         echo "</ul><br><br>";
 
@@ -48,7 +48,7 @@
         echo "User List: <ul>";
         while ($row = $getUserList->fetch(PDO::FETCH_ASSOC)) {
             echo "<li class='nameList'>- " . $row['picked_name'] . "</li>";
-            $userData[] = $row;
+            $userData[] = $row['picked_name'];
             }
         echo "</ul><br><br>";
         print_r($userData);
