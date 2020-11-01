@@ -51,6 +51,7 @@
             $userData[] = $row;
             }
         echo "</ul><br><br>";
+        print_r($userData);
 
         $matchedNames = array_intersect($compData, $userData);
       
