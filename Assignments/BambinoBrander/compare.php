@@ -53,7 +53,7 @@
         echo "</ul><br><br>";
         print_r($userData);
 
-        $matchedNames = array_intersect_key($compData, $userData);
+        $matchedNames = array_intersect($userData, $compData);
       
         echo "Matches: <ul>";
         foreach ($matchedNames as $matches) {
