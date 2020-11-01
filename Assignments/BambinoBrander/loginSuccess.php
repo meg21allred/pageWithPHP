@@ -3,8 +3,8 @@
 
     session_start();
 
-    $user = $_POST['userName'];
-    $password = $_POST['userPassword'];
+    $user = htmlspecialchars($_POST['userName']);
+    $password = htmlspecialchars($_POST['userPassword']);
     $num = 0;
     $dPassword = "";
     $userId;

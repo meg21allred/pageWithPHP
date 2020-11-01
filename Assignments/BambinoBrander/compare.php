@@ -30,8 +30,8 @@
     require_once("config.php"); 
     session_start();
 
-    $compUser = $_POST['userName'];
-    $compEmail = $_POST['userEmail'];
+    $compUser = htmlspecialchars($_POST['userName']);
+    $compEmail = htmlspecialchars($_POST['userEmail']);
     $compData = array();
     $userId = $_SESSION['userId'];
     $compUserId;
