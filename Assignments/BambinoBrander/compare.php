@@ -48,8 +48,6 @@
     }
 
     if($num == 1) {
-        echo "user found";
-
         //user exists, save comp user names into array
         $getCompUserList = $db->prepare("SELECT picked_name FROM picked_names WHERE login_id = :compUserId");
         $getCompUserList->execute(array(':compUserId' => $compUserId));
@@ -69,7 +67,7 @@
         //find matches in the users lists
         $matchedNames = array_intersect($userData, $compData);
       
-        echo "Matches: <ul>";
+        echo "<ul>";
         foreach ($matchedNames as $matches) {
             echo "<li class='nameList'>- " . $matches . "</li>";;
         }

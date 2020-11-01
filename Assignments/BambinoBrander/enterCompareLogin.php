@@ -36,7 +36,7 @@
     <br><br><br><br><br>
     <center>
     
-    Enter user Name and email of who you would like to compare:
+    <h1 class="blueText">Enter user Name and email of who you would like to compare:</h1>
     <br>
     <form action="compare.php" method="post">
     <label for="userName" class="labels">Enter user name: </label>
